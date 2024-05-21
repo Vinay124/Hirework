@@ -1,0 +1,66 @@
+.TopCompanyHiringSection {
+    margin-top: 3rem    ;
+}
+
+.companyHiringCardWrapper {
+    margin: 10px;
+    padding: 25px;
+    border-radius: 8px;
+    background: #fffefe;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.companyHiringCardWrapper:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    transition: all .3s ease;
+}
+
+.companyImages  {
+    display: flex;
+}
+.companyImages img {
+    width: 45px;
+    height: 45px;
+    margin: 0 10px ;
+    border-radius: 10px;
+}
+
+.companyName {
+    margin: 22px 0;
+}
+.companyName h5{
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.companyName span{
+    font-family: "Montserrat", sans-serif;
+    color: #595959;
+    font-weight:500;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+
+
+.btn-apply {
+    padding: 8px;
+    width: 100%;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid #d3d3d3;
+    cursor: pointer;
+}
+
+.companyHiringCardWrapper:hover .companyName h5,
+.companyHiringCardWrapper:hover .companyName span{
+    color: #0073ff78;
+    transition: all .3s ease-in;
+}
+.companyHiringCardWrapper:hover .btn-apply{
+    color: #ffffff;
+    background: #0073ff9d;
+    transition: all .3s ease-in;
+}
+
+.btn-apply:hover{
+    color: #ffffff;
+    background: #0073ff9d;
+    transition: all .3s ease-out;
+}

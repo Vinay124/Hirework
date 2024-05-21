@@ -1,0 +1,190 @@
+.navbar-Main {
+    background: #f0f6f4;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.LogoHeadding h1{
+    font-family: "Oleo Script", system-ui;
+    font-weight: 200;
+}
+.LogoHeadding span{
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 500;
+}
+
+.downloadApp{
+    width: 50px;
+
+}
+
+.downloadAppWrapper {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    margin: 0 16px;
+    cursor: pointer;
+}
+
+.btn-Recruiter {
+    padding: 0px;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonParentDiv {
+    display: flex;
+    justify-content: center;
+    /* margin: 0 1rem; */
+}
+
+.btn-Recruiter {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background: #3e3e3e;
+    color: #fff;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 500;
+    outline: none;
+    border: 1.2px solid transparent;
+    border-radius:8px;
+
+}
+
+.btn-Recruiter:hover {
+    background:transparent;
+    border: 1.2px solid #3e3e3e;
+    color: #3e3e3e;
+    transition: all .3s ease;
+}
+
+.btn-jobseeker {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background: transparent;
+    color: #1b1919;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 500;
+    outline: none;
+    border: 1.2px solid #3e3e3e;
+    border-radius:8px;
+}
+
+.btn-jobseeker:hover {
+    background: #1b1919;
+    color: #ffff;
+    transition: all .3s ease;
+
+}
+
+.nav-menuData {
+    display: flex;
+    margin: 0;
+}
+
+
+.nav-menuData li a{
+    color: #1d1c1c;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 10px;
+    background: transparent !important;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+.nav-menuData li {
+   margin: 10px 20px;
+}
+.nav-menuData li a:hover{
+    color: #414141;
+    transition: all .2s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+      }
+    50% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.submenuWrapper {
+    position: absolute;
+    background: #ffffff;
+    z-index: 99;
+    min-width: 200px;
+    background: #fff;
+    position: absolute;
+    width: auto;
+    display: flex;
+    left: 21rem;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    display: flex;
+    z-index: 99;
+    background: #fff;
+    position: absolute;
+    top: 4.1rem;
+    animation: fadeIn .5s ease-in-out;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.childWrapper {
+    display: flex;
+}
+
+.submenuWrapper > div li {
+    margin: 16px 40px;
+    position: relative;
+}
+
+.submenuWrapper > div li::before {
+    position: absolute;
+    content: "";
+    background: #e9e9e9;
+    height: 143px;
+    width: 2px;
+    left: 10.2rem;
+    top: 3rem;
+    border-radius: 30px;
+}
+
+
+.submenuWrapper .submenuwrap a{
+    padding: 8px ;
+    text-decoration: none;
+}
+
+.submenuWrapper .childWrapper a{
+    color: #606060;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-family: "Nunito Sans", sans-serif;
+    text-decoration: none;
+    font-family: 500;
+}
+.submenuWrapper .childWrapper a:hover{
+    color: #1b1b1b;
+    font-family: 600;
+}

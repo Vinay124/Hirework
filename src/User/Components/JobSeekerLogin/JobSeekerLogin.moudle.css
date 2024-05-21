@@ -1,0 +1,212 @@
+.jobseekerCol {
+    background: #fef9f9;
+    position: relative;
+}
+
+.loginWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 1.1rem;
+    margin: 5rem;
+}
+
+.forminnerdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.inputMainBox {
+    position: relative;
+    top: 18%;
+    width: 30rem;
+    border-radius: 8px;
+}
+
+.inputBoxWrapper {
+    position: relative;
+    margin-left:1.76rem;
+}
+
+.inputBoxWrapper input {
+    width: 93%;
+    padding: 0.625rem 10px;
+    font-size: 1rem;
+    letter-spacing: 0.062rem;
+    margin-bottom: 1.875rem;
+    border: 2px solid #4d4d4d;
+    background: transparent;
+    border-radius: 8px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.inputBoxWrapper label {
+    position: absolute;
+    top: 0;
+    left: 28px;
+    padding: 0.625rem 0;
+    font-size: 1.1rem;
+    color: #434343;
+    pointer-events: none;
+    background: transparent;
+    transition: 0.5s;
+}
+
+
+
+.inputMainBox .inputBoxWrapper input:focus ~ label,
+.inputMainBox .inputBoxWrapper input:valid ~ label,
+.inputMainBox .inputBoxWrapper input:not([value=""]) ~ label {
+  top: -1.125rem;
+  left: 22px;
+  color: #717171;
+  font-weight: 500;
+  font-size: 0.90rem;
+  background-color: #fff;
+  height: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: "Outfit",sans-serif;
+}
+
+.inputMainBox .inputBoxWrapper input:focus {
+  outline: none;
+  border: 2px solid #8f8f8f;
+}
+
+
+.inputMainBox input[type="submit"] {
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #0073FF;
+    padding: 0.625rem 1.25rem;
+    cursor: pointer;
+    border-radius: 0.312rem;
+    font-size: 1.12rem;
+    width: 70%;
+}
+  
+.inputMainBox input[type="submit"]:hover {
+    background-color: #287ae6;
+    box-shadow: 0 1px 1px 0 rgba(66, 133, 244, 0.45),
+    0 1px 3px 1px rgba(66, 133, 244, 0.3);
+    outline: none;
+    background: #93c4ff
+} 
+
+.companyDetails {
+    display: flex;
+    justify-content: space-between !important;
+    flex-direction: column;
+    margin: 1.2rem;
+}
+
+.companysDescrption {
+    text-align: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    margin: 3rem;
+}
+
+
+.companydetailWrapper {
+    background: url('../../../assets/Banner/login2.png') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: right;
+    display: flex;
+    justify-self: space-between;
+    color: #fff;
+}
+
+.companyDetails img {
+    width: -webkit-fill-available;
+    height: 100vh;
+    border-radius: 5px;
+}
+
+.suggestionsDiv   {
+    margin: 2rem;
+}
+.suggestionsDiv > div {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.suggestionsDiv > div a{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin:0 1rem;
+}
+.suggestionsDiv   {
+    margin: 1rem;
+}
+
+.jobseekerClients ul {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.jobseekerClients ul li img {
+    width: 100px;
+    height: auto;
+}
+
+
+.companythoughts p{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    line-height: 2.3;
+}
+
+.forgotPasswordDiv {
+    text-align: end;
+    margin: 1rem;
+    color: #0073FF;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+}
+
+.forgotPasswordDiv span a {
+    text-decoration: none;
+}
+
+.loginWrapperHeadding h2{
+    font-family: "Nunito Sans", sans-serif;
+    text-align: start;
+    font-weight: 700;
+
+}
+.loginWrapperHeadding span{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.btn-signinGoogle {
+    padding: 10px 16px;
+    margin-top: 1rem;
+    outline: none;
+    border: 1px solid #717171;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1.2rem;
+    background: transparent;
+    border-radius: 8px;
+}
+
+.backtoHomeBtn {
+    position: absolute;
+    right: 0;
+}
+.Backto_mainUi {
+    margin: 1rem;
+    padding: 1rem;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+}

@@ -1,0 +1,152 @@
+.SponsoredHiring {
+    margin:5rem 0;
+}
+
+.SponsoredHiringHeadding {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.SponsoredHiringHeadding p{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    color: #5e5e5ed6;
+    font-family: "Montserrat", sans-serif;
+}
+
+.dropdownButtonWrappers {
+    text-align: center;
+    margin: 1rem 12rem;
+}
+
+.SponsoredHiringcard {
+    height: 40vh;
+    display: flex;
+    margin-top: 10px;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.SponsoredcompanyLogoWrapper {
+    text-align: center;
+}
+
+.SponsoredcompanyLogo {
+    width: 40px;
+    text-align: center;
+}
+
+.SponsoredcompanyReviewRating {
+    padding: 10px;
+    /* background: #fff9f2; */
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.SponsoredcompanyReviewRating > div h5 {
+    font-family: "Nunito Sans", sans-serif;
+}
+.Sponsoredstaricon {
+    width: 20px;
+}
+
+.SponsoredstarRatingWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SponsoredstarRatingWrapper > div span {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    color: #a5a5a5;
+}
+
+.dropdownBtns {
+    background:  #fff;
+    border: 1px solid 979EC2;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 6px 15px;
+    margin-right: 8px;
+    margin-bottom: 12px;
+    display: inline-block;
+    color: #474D6A;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #474D6A;
+    margin-top: 10px;
+}
+
+.dropdownBtns.active {
+    background:  #fff;
+    border: 1px solid #5a73f4;
+    background: #5a73f4;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 6px 12px;
+    margin-right: 8px;
+    margin-bottom: 12px;
+    display: inline-block;
+    /* color: #5370ff; */
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+}
+
+.companyDescription {
+    font-family: "Montserrat", sans-serif;
+    color: #575757;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.SponsoredcompanyServicesTag {
+    text-align: center;
+}
+
+ .SponsoredcompanyServicesTag .SponsoredCompanyTags {
+    padding: 4px 8px;
+    margin-right: 8px;
+    border: 1px solid #636364;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 35px;
+    color: #474D6A;
+
+}
+
+.SponsoredviewJobsDiv {
+    display: flex;
+    justify-content: center;
+}
+.Sponsoredbtn-viewJobs {
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    
+}
+
+.Sponsoredbtn-viewJobs:hover {
+    background: #6075df;
+    color: white;
+    transition: all .3s ease-out;
+}

@@ -1,0 +1,78 @@
+.BrowserSection {
+    background: linear-gradient(180deg, #EDF5F3 0%, #FFFFFF 100%);
+    padding: 5rem;
+}
+
+.BrowserSectionHeadding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.BrowserSectionHeadding > div h1 {
+    font-size: 2.5rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    text-transform: capitalize;
+}
+.BrowserSectionHeadding > div p {
+    font-size: 1.1rem;
+    font-family: "Montserrat", sans-serif;
+    color: #595959;
+    margin-top: 1rem;
+}
+
+
+.categories > h4 {
+    font-family: "Nunito Sans", sans-serif;
+}
+/* BrowserByCategories */
+
+.CardWrapper {
+    margin-top: 3rem;
+    border-radius: 10px;
+    padding: 28px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 2px 0px rgba(27.999999999999993, 36.00000000000001, 51, 0.08);
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #E5E5E5;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.CardWrapper:hover {    
+    transition: all .3s ease;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; 
+    color: #ffffff;
+    background: #0073ff9d;
+}
+
+.CardWrapper:hover .CardArrowIcon {
+    color: rgb(255, 255, 255); 
+}
+.CardWrapper:hover .categoryIcon {
+    color: rgb(255, 255, 255);
+}
+
+
+.CardName {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.CardIcon {
+    margin-bottom: 1rem;
+}
+
+.CardArrowIcon {
+    color: #595959;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.cardNameWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0; 
+}

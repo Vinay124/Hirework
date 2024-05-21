@@ -1,0 +1,42 @@
+.DownloadApp {
+    /* background: #f9fcff;
+    margin: 1rem 10rem; */
+
+    background: #c9e4ff;
+    margin: 1rem 10rem;
+    padding: 1.5rem;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+
+.downloadAppWrapper {
+    margin: 0;
+}
+
+.DownloadAppBanner {
+    width: 80%;
+}
+
+.AppstoreDownload img,.playStoreDownload img {
+    width: 60%;
+}
+
+.DownloadappRow {
+    align-items: center;
+}
+
+.downloadAppText {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.downloadAppText p{
+    font-family: "Montserrat", sans-serif;
+    color: rgb(91, 91, 92);
+    font-size: 1.1rem;
+}
+
+.playStoreDownload ,.AppstoreDownload {
+    text-align: justify;
+    margin-top: 1rem;
+    cursor: pointer;
+}

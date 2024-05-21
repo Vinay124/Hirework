@@ -1,0 +1,204 @@
+.Footer {
+    background: #f5f5f2;
+    color: #121212;
+    /* #64666c */
+    padding: 1.2rem;
+    margin-top: 2rem;
+}
+
+.footerinnerDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #a8a8a8;
+    padding: 1.3rem;
+}
+
+.followUsdiv {
+    display: flex;
+    align-items: center;
+}
+.followUsdiv ul{
+    display: flex;
+    align-items: baseline;
+    padding: 0;
+}
+.followUsdiv ul li{
+    background: #e8e8e8;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    color: #7093fb;
+    margin:12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    cursor: pointer;
+}
+
+
+.followUsdiv ul li:hover {
+    transform: all .3s ease;
+    color: #4763f3;
+}
+
+/* footerMainRow */
+.footerMainRow {
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+/*  */
+.footerTextWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.footerTextWrapper > div span {
+    color: #64666c;
+}
+
+.footerDescription {
+    margin: 1rem 0;
+}
+
+.footerDescription p {
+    font-family: "Montserrat", sans-serif;
+    color: #89898a;
+}
+
+.newsLetterForm {
+    margin-top: 1rem;
+}
+
+.newsLetterForm input {
+    background: #fff;
+    border-color: #fff;
+    font-size: 14px;
+    padding: 14px 16px;
+    outline: none;
+    width: 60%;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    border:1px solid #c9e4ff;
+}
+
+.btn-newsletterNewsletter {
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1.65;
+    color: #64666c;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background: #5a73f4;
+    border: 1px solid transparent;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border-bottom-right-radius:4px;
+    border-top-right-radius:4px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-newsletterNewsletter:hover {
+    background: #3454f5;
+    transition: all .3s ease-out;
+}
+
+.addressDiv {
+    color: #64666c;
+}
+
+.quickLinks ul, .ForCandidates ul, .ForEmployers ul {
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.quickLinks ul li, 
+.ForCandidates ul li, 
+.ForEmployers ul li {
+    line-height: 2.2;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 13px;
+    font-weight: 600;
+    color: #64666c;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.quickLinks ul li:hover, 
+.ForCandidates ul li:hover, 
+.ForEmployers ul li:hover {
+    color: #174be8;
+    transform: all .3s ease-in-out;
+}
+
+.footerinnerTxt {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1.1rem;
+    color: #121212;
+    cursor: pointer;
+}
+
+.footerDownloadIcons {
+    margin-top: 1rem;
+}
+
+.AppStoreImage {
+    width: 100px;
+}
+.GoogleplayImage {
+    width: 100px;
+}
+
+.footerDownloadIcons > div  img {
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+.footerDownloadIcons > div  img:hover {
+    border: 2px solid #174be8;
+    transition: all .3s ease;
+}
+
+.copyrightMenus {
+    display: flex;
+}
+
+.copyrightMenus ul {
+    padding: 0;
+    display: flex;
+}
+
+.copyright_section > div h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #888888;
+}
+
+.copyrightMenus ul li{
+    margin: 0 1rem;
+    color: #707070;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 550;
+    cursor: pointer;
+}
+.copyrightMenus ul li:hover{
+    color: #121212;
+    transition: all .3s ease;
+}
+
+.copyright_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright_section {
+    border-top: 1px solid #d1d1d1;
+    padding: 1.5rem;
+}
