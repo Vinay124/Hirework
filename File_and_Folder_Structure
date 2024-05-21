@@ -1,0 +1,114 @@
+USER (Authentication)
+[*] Login
+Email & Password & Login
+
+SignUp
+1 Step
+Name
+Email 
+Mobile
+Password
+Confirm Password
+
+2 step
+[*] Personal Details
+[*] Education
+[*] Professional Details
+[*] Resume
+[*] Certifications
+[*] Skills And Recommendations
+[*] Additional info
+
+3step 
+HomePage (User Dashboard)
+
+
+
+
+HomePage (WithOut Loggin)
+[*] Find New Job Search(POST METHOD)
+[*] Browser Category (GET)
+[*] Top Company Jobs (GET)
+[*] Sponsored Companies (GET)
+[*] Download App 
+[*] Footer
+
+(User Loggedin Dashboard)
+[*] Navigaction
+Main Content
+[*] Categorys
+Jobs && Company 
+
+
+Jobs Filter
+[*] Filter By : Experence 
+[*] Category : Job Location
+
+
+Jobs 
+[*] Jobs feeds (Recommended JOBS)
+[*] More Hiring Category Jobs ()
+[*] Sponsored Jobs (MNC)
+[*] Top Company Jobs()
+
+
+leftSide (Profile info)
+[*] Profile Details
+[*] Completed Profile
+[*] Profile Actions Box (notification)
+[*] Profile performance (OP)
+
+; ===================================================================
+
+Recruiter HomePage
+Navigaction 
+[*] HomePage With login & Sales Enquiry
+
+[*] ServiceDetails
+[*] Web app Features
+[*] app Features
+[*] Client List
+[*] Testimonials
+[*] Blogs
+[*] App Banner
+
+
+Recruiter SignUp
+[*] Name 
+[*] Location
+[*] Phone
+[*] Organization
+[*] Designation
+[*] Work Email Id
+[*] Password
+[*] Confirm Password
+
+
+Recruiter Loggedin
+[*] Welcome Page
+[*] Posting Jobs Types
+[*] Plans Datails
+[*] Request Call Back (section)
+[*] Footer
+
+
+
+Recruiter Job Posting (Basic Details (Form))
+[*] Job Title
+[*] Location (3 to 4 Locations)
+[*] Years of Experence
+[*] JD
+[*] Category 
+[*] Functional Area 
+[*] Annual Salary (min and Max)
+[*] Graduation Year 
+[*] Min Batch Max Batch
+[*] Skills Tags 
+[*] Job Type Full Time , PartTime 
+Submit
+
+
+onceSubmitted Goto Dashboard and Showing Recent Post Jobs
+
+
+
