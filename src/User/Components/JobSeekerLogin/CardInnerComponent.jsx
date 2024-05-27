@@ -1,9 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { RiCloseLargeLine } from 'react-icons/ri'
 import './JobSeekerLogin.moudle.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
-const CardInnerComponent = () => {
+const CardInnerComponent = ({ email, setEmail, password, setPassword, error,  }) => {
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const navigate = useNavigate();
+  
+  const handleLoginSubmit = (e) => {
+    e.preventDefault();
+
+    if (email === 'admin@capace.com' && password === 'admin') {
+      console.log('Login Successful');
+      navigate('/UserDashboard');
+  
+    } else {
+      setError('Invalid UserName and Password');
+    }
+  };
+
+
   return (
     <>
     <div className='backtoHomeBtn'>
@@ -30,19 +50,21 @@ const CardInnerComponent = () => {
 
                 {/* / */}
                 <div className='inputMainBox'>
-                  <form>
+                  <form onSubmit={handleLoginSubmit}>
                     <div className='inputBoxWrapper'>
-                      <input type='email' require className=''/>
+                      <input type='email' require className='' 
+                      value={email} onChange={(e) => setEmail(e.target.value)}/>
                       <label>Email</label>
                       {/* ifLogin email error */}
                       <span></span>
                     </div>
                     {/* passwordBox */}
                     <div className='inputBoxWrapper'>
-                      <input type='password' require/>
+                      <input type='password' require 
+                      value={password} onChange={(e) => setPassword(e.target.value)}/>
                       <label>Password</label>
                       {/* ifLogin password error */}
-                      <span></span>
+                      {error && <p style={{ color: 'red' }}>{error}</p>}
                     </div>
 
                     <div className='forgotPasswordDiv'>

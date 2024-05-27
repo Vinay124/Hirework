@@ -1,0 +1,145 @@
+.jobFilterSection {
+    background: #fefefe;
+    padding: 10px 1.5rem;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.checkListDiv {
+    margin: 10px 8px;
+}
+
+.checkListDiv > div {
+    margin: 7px 1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkmark {
+    color: rgb(121, 120, 120);
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+.jobCount{
+    color: rgb(121, 120, 120);
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+}
+.checkListDiv > div label{
+    color: rgb(71, 71, 71);
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 3px;
+    text-transform: capitalize;
+}
+
+.checkListDiv h5 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 650;
+    color: rgb(80, 80, 80);
+    margin-bottom: 1rem;
+}
+.FilterInputWrapper{
+    margin-right: 10px;
+}
+
+.btn-FilterBtn {
+    padding: 8px 20px;
+    margin-top: 10px;
+    width: 100%;
+    margin: 1rem auto;
+    border-radius: 18px;
+    background: #0073FF;
+    color: #eef0f0;
+    outline: none;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+}
+
+.btn-FilterBtn:hover {
+    background: transparent;
+    border:1.5px solid #0073FF;
+    transition: all .3s ease;
+    color: #0073FF;
+}
+
+.containerlabel {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .containerlabel input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;    
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    background-color: #eee;
+  }
+  
+  .containerlabel:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .containerlabel input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  .containerlabel:after {
+    content:'✓';
+    position: absolute;
+    display: none;
+  }
+  
+  .containerlabel input:checked + .checkmark svg {
+    visibility: visible;
+}
+  /* .containerlabel input:checked ~ .checkmark:after {
+    display: block;
+
+
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  } */
+
+  .checkmark svg {
+    visibility: hidden;
+    
+  }
+  
+  .containerlabel .checkmark:after {
+    left: 9px;
+    top: 5px;
+    /* content:'✓'; */
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+

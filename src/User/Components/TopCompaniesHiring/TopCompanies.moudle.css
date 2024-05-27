@@ -1,0 +1,26 @@
+.Topcompanies {
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    margin-top: 2rem;
+}
+
+.TopcompaniesHeadding {
+    display: flex;
+    justify-content: space-between;
+}
+
+.TopcompaniesHeadding h5 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: bold;
+}
+.TopcompaniesHeadding span {
+    color: #6e6e6e;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+}   
+
+.topCompanyHiringRowDiv {
+    margin-top: 1.2rem;
+}

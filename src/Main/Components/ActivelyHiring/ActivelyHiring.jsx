@@ -135,7 +135,7 @@ const ActivelyHiring = () => {
             </div>
 
             <Row>
-                <Swiper spaceBetween={15} slidesPerView={3}>
+                <Swiper spaceBetween={5} slidesPerView={3}>
                 {filteredData.map((company, index) => (
                     <SwiperSlide>
                     <div key={index}>

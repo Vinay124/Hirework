@@ -9,7 +9,6 @@ const Navigation = () => {
 
     const [activeSubmenu, SetActiveSubmenu] = useState(null);
 
-
     // Hover Effect
     const handleMouseEnter = (submenuId) => {
         SetActiveSubmenu(submenuId);
@@ -19,7 +18,6 @@ const Navigation = () => {
         SetActiveSubmenu(null)
     }
 
-    
 
   return (
     <>
@@ -51,17 +49,17 @@ const Navigation = () => {
             </ul>
         </div>
 
-
         {/* Button and Login */}
         <div className='buttonWrapper'>
             <div className='downloadAppWrapper'>
                 <img src={MobileIcon} className='downloadApp'/>
                 <span>Download App</span>
             </div>
-
             <div className='buttonParentDiv'>
                 <div>
-                    <button className='btn-Recruiter'>Recruiter Login</button>
+                    <Link to="/RecruiterLogin">
+                        <button className='btn-Recruiter'>Recruiter Login</button>
+                    </Link>
                 </div>
                 <div>
                     <Link to="/JobSeekerLogin">

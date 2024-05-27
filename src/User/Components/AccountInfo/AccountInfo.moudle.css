@@ -1,0 +1,305 @@
+.userDetails {
+    text-align: center;
+    padding: 1.8rem 1rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.score-indicator img{
+    width: 80px;
+    height: 80px;  
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+}
+
+.userDashboardDetails {
+    padding-top: 2rem;
+    background: #F8FAFC;
+    padding: 1.5rem;
+}
+
+.percentage {
+    background: black;
+}
+
+
+.score-indicator {
+    position: relative;
+  }
+  
+  .score-indicator .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 88px !important;
+    height: 88px !important;
+    border-radius: 50%;
+    background-color: #fc3a3a;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    left: 93px !important;
+    top: -4px !important;
+    z-index: 1;
+  }
+  
+  .score {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .profile-score.filled .circle {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .profileImage_edit {
+    position: absolute;
+    top: 3.5rem;
+    background: #0073FF;
+    width: 26px;
+    height: 26px;
+    right: 5rem;
+    border-radius: 20px;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    cursor: pointer;
+  }
+  
+
+  .profile-score {
+    position: relative;
+    width: 100px; 
+    height: 100px; 
+    font-family: Arial, sans-serif;
+  }
+
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #e0e0e0; 
+  }
+  
+  .score {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #333;
+  }
+
+.userDataDetails > div span {
+    color: #808080;    
+}
+
+/* /workExpInnerDiv */
+/* .workExpInnerDiv {
+    padding: 2rem 13px;
+    border-radius: 16px;
+    background: #fff;
+    margin-top: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+} */
+
+.workExpInnerDiv {
+  margin-top: 2rem;
+}
+
+.workExpInnerDiv > div {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.workExpDetails {
+  text-align: justify;
+}
+
+.workExpDetails h6{
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #909090;
+}
+.workExpDetails span{
+  color: #AEB6BF;
+}
+
+.workExpYear {
+  color: #AEB6BF;
+}
+
+.btn-AccountEditProfile {
+  padding: 10px 20px;
+  background: #f6f6f6;
+  width: 100%;
+  margin: 1rem auto;
+  border-radius: 20px;
+  color: #0073FF;
+  outline: none;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+}
+
+.btn-AccountEditProfile:hover {
+  border: 1.5px solid #0073FF;
+  transition: all .3s ease;
+}
+
+.RecentJobsHeaddingwrapper {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* personal info */
+.PersonalInformation {
+  margin-top: 2rem;
+}
+
+.PersonalInformation > div {
+  text-align: justify;
+}
+
+.userIcon {
+  background: #fdfdfd;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+
+.PerosnalInformationRow {
+  margin-top: 2rem;
+}
+
+.userDetailsDiv span {
+  color: #909090;
+  margin-bottom: 10px;
+}
+.userDetailsDiv h6 {
+  color: #606060;
+  font-weight: 500;
+  margin-top: 8px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.user_DetailsWrapper {
+  display: flex;
+  margin: 8px;
+}
+
+/* SkillsDiv */
+.SkillsWrapper {
+  margin-top: 2rem;
+}
+
+.SkillsDiv {
+  text-align: justify;
+  margin-top: 1rem;
+}
+
+.SkillsDiv > div h5 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.SkillsDiv .SkillsinnerDiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.SkillsDiv .SkillsinnerDiv > div {
+    background: #f9f9f9;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    grid-row-gap:10px;
+}
+
+.SkillsDiv .SkillsinnerDiv > div h6 {
+    color: #a4a4a4;
+    font-size: 13px;
+    margin: 0;
+}
+
+.job-alertsSection {
+  padding: 1rem;
+  margin-top: 1.2rem;
+  text-align: justify;
+  background: #e8f2ff;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.job-alertsSection > div span {
+  color: #909090;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+}
+
+.job-alertsSection > div input {
+  padding: 6px 10px;
+  outline: none;
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.btn-job-alerts {
+  padding: 6px 13px;
+  margin-top: 1rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #0073FF;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.emailandMobileSection {
+  display :flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.btn_profileCompleted {
+  padding: 10px 20px;
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #0073FF;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.btn_profileCompleted:hover {
+  background: #0073FF;
+  color: #ffffff;
+  transition: all .3s ease-in-out;
+}
+
+.progressBarMainwrapper {
+  margin-top: 2rem;
+}

@@ -1,0 +1,135 @@
+.userNavigation{
+    padding: 1rem 2rem;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.jobSearchInput {
+    display: flex;
+}
+
+.alertSectionDiv {
+    display: flex;
+    justify-content: space-between;
+}
+.alertSectionDiv > div{
+    margin: 0rem 1rem;
+}
+
+.accountUserImage img{
+    width: 45px;
+    height: 45px;
+    border-radius: 80px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    margin-right: 10px;
+}
+
+.accountInfo{
+    display: flex;
+    align-items: center;
+}
+
+
+.notificationBadge {
+    position: relative;
+}
+
+.notificationBadge span {
+    position: absolute;
+    background: red;
+    width: auto;
+    /* height: 20px; */
+    top: -2rem;
+    left: 33px;
+    padding: 3px;
+    color: #fff;
+    border-radius: 50px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.jobSearchInput > div input{
+    padding: 8px 16px;
+    border: 1px solid #e5e5e5;
+    outline: none;
+    border-radius: 5px;
+    margin: 0 13px;
+}
+
+.search-btn {
+    padding: 8px 30px;
+    background: #0073FF;
+    outline: none;
+    border: 1.3px solid #14a077;
+    color: white;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    border-radius: 10px;
+}
+
+.navLinksDashboard ul {
+    padding: 0;
+    margin: 0;
+}
+.navLinksDashboard ul li a{
+    color: #1d1c1c;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 10px;
+    background: transparent !important;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.dashboardSubmenuWrapper{
+    position: absolute;
+    background: #ffffff;
+    z-index: 99;
+    min-width: 200px;
+    width: auto;
+    left: 18rem;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    top: 3.8rem;
+    animation: fadeIn .5s ease-in-out;
+    border-radius: 10px;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+}
+
+
+.dashboardSubmenuWrapper div li a{
+    color: #1d1d1e;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 15px;
+}
+.dashboardSubmenuWrapper div li a:hover{
+    color: #0073FF;
+}
+
+.profileDetails {
+    position: absolute;
+    background: #ffffff;
+    z-index: 99;
+    min-width: 200px;
+    width: auto;
+    right: 0;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    top: 5.2rem;
+    animation: fadeIn .5s ease-in-out;
+    border-radius: 10px;
+}
+
+
+.profileinnerDiv {
+    padding: 1rem;
+}

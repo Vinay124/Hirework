@@ -129,7 +129,7 @@ const SponsoredCompanies = () => {
             </div>
 
             <Row>
-                <Swiper spaceBetween={15} slidesPerView={5}>
+                <Swiper spaceBetween={5} slidesPerView={5} autoplay={true}>
                 {filteredData.map((company, index) => (
                     <SwiperSlide>
                     <div key={index}>

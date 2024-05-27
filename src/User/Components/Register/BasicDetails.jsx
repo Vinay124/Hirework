@@ -1,21 +1,22 @@
-import './ForgotPassword.moudle.css'
 import React from 'react'
+import { Col, Row } from 'react-bootstrap';
+import { RiCloseLargeLine } from 'react-icons/ri'
 // import './JobSeekerLogin.moudle.css'
 import { Link } from 'react-router-dom'
-import loginimage from '../../../assets/Banner/login.jpg'
-import loginimage2 from '../../../assets/Banner/login2.png'
-import { FcGoogle } from "react-icons/fc";
-import { FaFacebook } from "react-icons/fa";
-import { RiCloseLargeLine } from "react-icons/ri";
-import { Col, Container, Row } from 'react-bootstrap'
 
-const ForgotPassword = () => {
+const BasicDetails = ({ formData, setFormData, nextStep}) => {
+
+    const handleChange = (e) => {
+        setFormData({...formData, [e.target.name]: e.target.value });
+    };
+
+
   return (
     <>
-<section>
-        <Row className='m-0'>
-          <Col className='col-lg-5 p-0 m-0 companydetailWrapper'>
-            <div className='companyDetails'>
+    <section>
+      <Row className='m-0'>
+        <Col className='col-lg-5 p-0 m-0 companydetailWrapper'>
+        <div className='companyDetails'>
               <div className='LogoHeadding'>
                 <h3>Hire <span>Work</span></h3>
               </div>
@@ -44,54 +45,54 @@ const ForgotPassword = () => {
                 </div>
               </div>             
             </div>
-          </Col>
-          <Col className='col-lg-7 p-0 m-0 jobseekerCol'>
-          <div className='backtoHomeBtn'>
-        <Link to="/JobSeekerLogin">
+        </Col>
+        <Col className='col-lg-7 p-0 m-0 jobseekerCol'>
+        <div className='backtoHomeBtn'>
+        <Link to="/">
             <button className='Backto_mainUi'><RiCloseLargeLine size={26}/></button>
             </Link>
         </div>
-    <div className='loginWrapper'>
+        <div className='loginWrapper'>
         <div className='forminnerdiv'>
-        {/* text */}
         <div className='loginWrapperHeadding'>
-        <h2> Reset Password</h2>
-            <span>Please Enter Your Email</span>
-        </div>
-
-                {/* / */}
+          <h2> Welcome Guest</h2>
+            <span>Sign up for Hire Work</span>
+            </div>
                 <div className='inputMainBox'>
-                  <form>
+                  <form> 
                     <div className='inputBoxWrapper'>
-                      <input type='email' require className='' placeholder='Enter your Email'/>
-                      <label>Email</label>
-                      <span></span>
+                      <input type='text'  
+                      name="first_name"
+                      value={formData.first_name} onChange={handleChange}
+                      />
+                      <label>FirstName</label>
                     </div>
-                    {/* <div className='forgotPasswordDiv'>
-                     
-                      <span>
-                      <Link to="/ForgotPassword">Forgot Password</Link></span>
-                    </div> */}
 
-                    {/* button */}
-                    <input type="submit" className='btn-signin' name="sign-in" value="Get New Password" />
+                    <div className='inputBoxWrapper'>
+                      <input type='text' 
+                       name="last_name"
+                      value={formData.last_name} onChange={handleChange}/>
+                      <label>Last name</label>
+                    </div>
+
+                    <input type="button" className='btn-signin' onClick={nextStep} name="next" value="Next" />
                   </form>
 
                   <div className='suggestionsDiv'> 
                     <div>
-                      <span>Don’t have an account? </span>
-                      <Link to="/Register">Sign Up for free</Link>
+                      <span>Already Registered? </span>
+                      <Link to="/JobSeekerLogin">Login here</Link>
                     </div> 
                   </div>
                 </div>
               </div>
-            </div> 
-
-          </Col>
-        </Row>  
+            </div>
+        </Col>
+      </Row>
     </section>
     </>
+    
   )
 }
 
-export default ForgotPassword
+export default BasicDetails
