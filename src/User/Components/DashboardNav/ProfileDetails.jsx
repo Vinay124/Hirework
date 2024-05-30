@@ -1,12 +1,162 @@
 import React from 'react'
 import Profileimage from '../../../assets/usersIcon/UserAvatar.jpg'
+import { MdOutlineLogout } from "react-icons/md";
+import { IoSettingsOutline } from "react-icons/io5"
+import { CgProfile } from "react-icons/cg";
+import { LiaUserEditSolid } from "react-icons/lia";
+import { LuMessagesSquare } from "react-icons/lu";
+import { HiOutlineSaveAs } from "react-icons/hi";
+import { MdOutlinePeopleOutline } from "react-icons/md";
+import { FaTasks } from "react-icons/fa";
+import ProgressBar from "@ramonak/react-progress-bar";
+import axios from 'axios'
+import Config from '../../../../config';
+import { Link, useNavigate } from 'react-router-dom';
 
-const ProfileDetails = ({ submenuData }) => {
+
+const ProfileDetails = ({ submenuData, UserData }) => {
+
+
+  const NavLinks = {
+    "links":[
+      {
+        "id":1,
+        "name":"Profile",
+        "url":"/",
+        "icon":<CgProfile size='28' color="#898989"/>
+      },
+      {
+        "id":2,
+        "name":"Edit Profile",
+        "url":"/",
+        "icon":<LiaUserEditSolid size='28' color="#898989"/>
+      },
+      {
+        "id":3,
+        "name":"Messages",
+        "url":"/",
+        "icon":<LuMessagesSquare size='28' color="#898989"/>
+      },
+      {
+        "id":4,
+        "name":"Save Jobs",
+        "url":"/",
+        "icon":<HiOutlineSaveAs size='28' color="#898989"/>
+      },
+      {
+        "id":5,
+        "name":"Recruiter View",
+        "url":"/",
+        "icon":<MdOutlinePeopleOutline size='28' color="#898989"/>
+
+      },
+      {
+        "id":6,
+        "name":"Pending Assessments",
+        "url":"/",
+        "icon":<FaTasks size='28' color="#898989"/>
+      },
+      {
+        "id":7,
+        "name":"Settings",
+        "url":"/",
+        "icon":<IoSettingsOutline size='28' color="#898989"/>
+      },
+      // {
+      //   "id":8,
+      //   "name":"LogOut",
+      //   "url":"/",
+      //   "icon":<MdOutlineLogout size='28' color="#898989"/>
+      // }
+    ]
+  }
+
+  // Logoutfunction
+
+  const { apiUrl } = Config;
+
+  const navigate = useNavigate();
+
+  
+
+  const tokenID = sessionStorage.getItem('token');
+  console.log(tokenID)
+
+  const handleLogout = async () => {
+    try {
+      await axios.post(`${apiUrl}user/logout`,{"token":tokenID});
+      sessionStorage.removeItem('token');
+      navigate('/JobSeekerLogin')
+    } catch (error) {
+      console.log('LogoutFailed',error)
+    }
+  };
+
+
   return (
     <>
     <div className='profileDetails'>
       <div className='profileinnerDiv'>
-        <span>Response from Profile Details</span>
+        <div>
+            {UserData.data.map((userinfo) => {
+              return(
+                <>
+                <div className='profileDropdownDetails'>
+                    <div className='profileDetailsWrapperDiv'>
+                      <div className='userimage'>
+                        <img src={userinfo.user_image} className='' alt=''/>
+                      </div>
+                      <div>
+                        <h4>{userinfo.userName}</h4>
+                        <span>{userinfo.role}</span>
+                        <div>
+                          <Link to="/UserDashboard/UserProfileDetails">
+                            <button className='btn-viewandUpdate'>View and Update Profile</button>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className='progressBarDiv mb-3'>
+                      <ProgressBar completed={50}
+                      height='10px'
+                      baseBgColor='#dddddd'
+                      bgColor='#69aaf9'
+                      width='80%'
+                      style={{margin:'0 auto'}}
+                      labelSize='0' />
+                    </div>
+
+                </div>
+                <div>
+                  
+                  <div className='navLinksWrapper'>
+                      <ul>
+                        {NavLinks.links.map((navLink) => {
+                          return (
+                            <li>
+                                <span className='navLinkHover'>{navLink.icon}</span>
+                                {navLink.name}
+                            </li>
+                          )
+                        })}
+
+                        <div className='logoutDiv'>
+                          <div>
+                            <MdOutlineLogout size='28' color="#898989"/>
+                          </div>
+                          <div>
+                              <button className='btn-logout' onClick={handleLogout}>Logout</button>
+                          </div>
+                        </div>
+                      </ul>
+                  </div>
+
+                </div>
+                </>
+              )
+            })}
+        </div>
       </div>
     </div>
     </>

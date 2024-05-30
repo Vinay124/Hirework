@@ -9,11 +9,9 @@ import { FaRegBookmark } from "react-icons/fa";
 
 // hide
 import { FaRegEyeSlash } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const RecentJobs = () => {
-
-
-    
 
 
     const recentJobsData = {
@@ -134,7 +132,7 @@ const RecentJobs = () => {
             },
             
         ]
-    }
+    };
 
 
   return (
@@ -144,7 +142,9 @@ const RecentJobs = () => {
                 <h4>Recent Jobs</h4>
             </div> 
             <div>
-                <button className='btn-viewAllJobs'>View all</button>
+                <Link to="/UserDashboard/RecentJobs">
+                    <button className='btn-viewAllJobs'>View all</button>
+                </Link>
             </div>
         </div>
 

@@ -303,3 +303,8 @@
 .progressBarMainwrapper {
   margin-top: 2rem;
 }
+
+
+.progressBarDiv > div > div {
+  margin: 10px auto;
+}

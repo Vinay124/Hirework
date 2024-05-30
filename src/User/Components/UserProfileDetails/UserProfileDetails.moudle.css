@@ -1,0 +1,184 @@
+.editProfileRow {
+    padding: 2rem 0;
+}
+
+
+.EditProfileDetails {
+    background: #F8F9FB;
+}
+
+.editProfileDetailsWrapper {
+    background: #ffffff;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.editProfileImage  img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+.profileInnerRowDiv > div h4 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+}
+
+.profileInnerRowDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-bottom: 15px;
+    border-bottom: 1.5px solid #c7c4c4;
+}
+
+.profileUpdatedStatus  span{
+    font-size: 13px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    color: rgb(128, 128, 128);
+}
+
+.ProfileuserName {
+    display: flex;
+    align-items: baseline;
+
+}
+
+.job_designation span{
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+}
+
+.currentCompany span {
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    color: #717171;
+}
+
+.personal_detailsWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.personal_detailMainDiv > div{
+    margin: 10px 0;
+}
+
+.personal_detailMainDiv > div span{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 550;
+    color: #717171;
+    font-size: 15px;
+}
+
+.editProfileMainDiv {
+    align-items: center;
+}
+
+.personalDetailsinnerDiv {
+    background: #ffffff;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.personalDetailHeadding {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.personalDetailHeadding > div h4 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 660;
+}
+
+.personalDetailHeadding > div span {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.personalDetailsinnerWrapper {
+    display: grid;
+    margin: 1rem;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 2rem;
+    grid-gap: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1.6px solid #EDEEEF;
+}
+
+.careerBreakDiv h6,
+.addressdiv h6,
+.Differently_abledDiv h6,
+.personal__Info h6 {
+    margin: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #989898;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.careerBreakDiv span,
+.addressdiv span,
+.Differently_abledDiv span,
+.personal__Info span {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #474d6a;
+    font-weight: 580;
+    font-size: 13px;
+}
+
+.iconBackground {
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin: 0 16px;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+}
+
+.PersonalDetailsSecondDiv {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    margin-top: 2rem;
+}
+
+.EmailDiv,
+.birthDayDiv,
+.WorkTypeDiv,
+.SalaryExpDiv {
+    display: flex;
+    align-items: center;
+}
+
+.EmailDiv > div h6,
+.birthDayDiv > div h6,
+.WorkTypeDiv > div h6,
+.SalaryExpDiv  > div h6{
+    /* color: rgb(160, 160, 160); */
+    margin-bottom: 5px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #474d6a;
+
+}
+
+.EmailDiv > div span,
+.birthDayDiv > div span,
+.WorkTypeDiv > div span,
+.SalaryExpDiv  > div span{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #474d6a;
+}
+

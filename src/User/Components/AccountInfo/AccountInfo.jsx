@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './AccountInfo.moudle.css'
 import UserAvatar from '../../../assets/usersIcon/UserAvatar.jpg' 
 import { Col, Row } from 'react-bootstrap';
 import { RiEditCircleFill } from "react-icons/ri";
@@ -10,6 +9,11 @@ import { SlCalender } from "react-icons/sl";
 import { IoWalletOutline } from "react-icons/io5";
 import { MdWorkOutline } from "react-icons/md";
 import ProgressBar from "@ramonak/react-progress-bar";
+import './AccountInfo.moudle.css'
+import { Link } from 'react-router-dom';
+
+
+
 
 const AccountInfo = () => {
 
@@ -159,7 +163,7 @@ const AccountInfo = () => {
             },
             
         ]
-    }
+    };
 
 
 
@@ -187,7 +191,7 @@ const AccountInfo = () => {
         
         <div className='userDataDetails'>
             <div>
-                <h4>Karthik</h4>
+                <h4>Karthik K</h4>
             </div>
             <div>
                 <span>React Developer</span>
@@ -201,13 +205,21 @@ const AccountInfo = () => {
                 </div>
             </div>
         </div>
-
+    
         <div className='progressBarMainwrapper'>
-            <div>
-                <ProgressBar completed={60} width='100%' />
+            <div className='progressBarDiv'>
+                <ProgressBar completed={50}
+                height='10px'
+                baseBgColor='#dddddd'
+                bgColor='#69aaf9'
+                width='80%'
+                style={{margin:'0 auto'}}
+                labelSize='0' />
             </div>
             <div>
-                <button className='btn_profileCompleted'>Complete Profile</button>
+                <Link to="/UserDashboard/UserProfileDetails">
+                    <button className='btn_profileCompleted'>Complete Profile</button>
+                </Link>
             </div>
         </div>
 

@@ -51,7 +51,6 @@ const Applies = ({JobData}) => {
           </SwiperSlide>
           )
         })}
-          
         </Swiper>
        
       </Row>

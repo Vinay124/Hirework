@@ -7,6 +7,9 @@ import UserAvatar from '../../../assets/usersIcon/UserAvatar.jpg'
 import DashboardSubMenus from './DashboardSubMenus';
 import ProfileDetails from './ProfileDetails';
 import './DashboardNav.moudle.css'
+import { IoIosSettings } from "react-icons/io";
+
+
 
 const DashboardNav = () => {
 
@@ -153,6 +156,120 @@ const DashboardNav = () => {
         setOpenUserSetting(!openUserSetting);
     }
 
+    const UserData = {
+        "data":[
+            {
+                "id":1,
+                "user_image":UserAvatar,
+                "userName":"Karthik K",
+                "role":"React Developer",
+                "profile_score":50,
+                "search_appearance":100,
+                "recruiter_actions":33,
+            }
+        ]
+    };
+
+    // Message Popup
+
+    // Notification
+    const [notification, setNotification] = useState();
+
+    const openNotification = () => {
+        setNotification(!notification)
+    };
+
+    // notification data
+    const notificationData = {
+        "notifications": [
+            {
+                "type": "New Job Alert",
+                "title": "Software Engineer at Tech Innovators Inc.",
+                "posted": "Just now",
+                "location": "San Francisco, CA",
+                "salary": "$120,000 - $140,000 per year",
+                "applyBy": "June 15, 2024",
+                "description": "Seeking a skilled software engineer with 3+ years of experience in Python and JavaScript. Strong problem-solving skills and a passion for innovation are a must."
+            },
+            {
+                "type": "New Job Alert",
+                "title": "Marketing Manager at Creative Minds Co.",
+                "posted": "10 minutes ago",
+                "location": "Remote",
+                "salary": "$70,000 - $90,000 per year",
+                "applyBy": "June 20, 2024",
+                "description": "Looking for a dynamic marketing manager with expertise in digital marketing strategies and social media management. Previous experience in a similar role required."
+            },
+            {
+                "type": "Application Status Update",
+                "title": "Project Manager at BuildIt Corp.",
+                "status": "Under Review",
+                "appliedOn": "May 15, 2024",
+                "description": "Thank you for your application for the Project Manager position at BuildIt Corp. Your application is currently under review. We will notify you of the next steps soon."
+            },
+            {
+                "type": "New Job Alert",
+                "title": "Data Analyst at Data Insights LLC",
+                "posted": "30 minutes ago",
+                "location": "New York, NY",
+                "salary": "$80,000 - $95,000 per year",
+                "applyBy": "June 25, 2024",
+                "description": "Seeking a data analyst with proficiency in SQL and data visualization tools like Tableau. Experience in data mining and statistical analysis is preferred."
+            },
+            {
+                "type": "Interview Scheduled",
+                "title": "UX Designer at Creative Studio",
+                "interviewDate": "June 5, 2024",
+                "time": "2:00 PM EST",
+                "location": "Virtual (Zoom link will be sent via email)",
+                "description": "Your interview for the UX Designer position at Creative Studio has been scheduled. Please prepare a portfolio presentation and be ready to discuss your design process."
+            },
+            {
+                "type": "New Job Alert",
+                "title": "Customer Service Representative at HelpDesk Inc.",
+                "posted": "1 hour ago",
+                "location": "Austin, TX",
+                "salary": "$40,000 - $50,000 per year",
+                "applyBy": "June 10, 2024",
+                "description": "Join our team as a customer service representative. Excellent communication skills and a friendly attitude are essential. Prior customer service experience is a plus."
+            },
+            {
+                "type": "Application Status Update",
+                "title": "Junior Accountant at FinanceWorks",
+                "status": "Rejected",
+                "appliedOn": "May 10, 2024",
+                "description": "We regret to inform you that your application for the Junior Accountant position at FinanceWorks was not successful. Thank you for your interest, and we encourage you to apply for future openings."
+            },
+            {
+                "type": "New Job Alert",
+                "title": "Graphic Designer at AdCreatives",
+                "posted": "2 hours ago",
+                "location": "Chicago, IL",
+                "salary": "$50,000 - $65,000 per year",
+                "applyBy": "June 30, 2024",
+                "description": "We are looking for a talented graphic designer with a strong portfolio and proficiency in Adobe Creative Suite. Experience in branding and advertising is highly desirable."
+            },
+            {
+                "type": "Interview Scheduled",
+                "title": "Sales Executive at Global Sales Co.",
+                "interviewDate": "June 10, 2024",
+                "time": "11:00 AM EST",
+                "location": "Company Headquarters (123 Main St, New York, NY)",
+                "description": "Your interview for the Sales Executive position at Global Sales Co. has been scheduled. Please bring a copy of your resume and be prepared to discuss your sales experience and techniques."
+            },
+            {
+                "type": "New Job Alert",
+                "title": "HR Coordinator at PeopleFirst HR",
+                "posted": "3 hours ago",
+                "location": "Remote",
+                "salary": "$55,000 - $70,000 per year",
+                "applyBy": "July 1, 2024",
+                "description": "Seeking an HR coordinator with strong organizational skills and experience in recruitment and employee relations. HR certification is a plus."
+            }
+        ]
+    }
+
+
   return (
     <>
     <nav className='userNavigation'>
@@ -236,7 +353,7 @@ const DashboardNav = () => {
             </div>
             <div>
                 <IoNotificationsOutline size={25}/>
-                <IoIosArrowDown size={16} className='mx-1' color='#494949'/>
+                <IoIosArrowDown size={16} className='mx-1' color='#494949' onClick={openNotification}/>
             </div>
         </div>
 
@@ -250,10 +367,34 @@ const DashboardNav = () => {
             </div>
             <IoIosArrowDown size={20} onClick={openPopup}/>
         </div>
-
+        {/* user info */}
         {openUserSetting && (
-            <ProfileDetails close={openPopup} openUserSetting={openUserSetting}/>
+            <ProfileDetails UserData={UserData} close={openPopup} openUserSetting={openUserSetting}/>
         )}
+
+        {/* Notification */}
+        {notification && (
+            <div className='notificationWrapper'>
+                <div className='notificationinnerDiv'>
+                    <div>
+                        <div>
+                            <h6>Notification</h6>
+                            <span>Mark all as read</span>
+                        </div>
+                        <div>
+                            <div>
+                                <button>All</button>
+                                <button>Archived</button>
+                            </div>
+                            <div>
+                                <IoIosSettings size={30}/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )}
+
     </nav>
     </>
   )

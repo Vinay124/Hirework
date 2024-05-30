@@ -1,19 +1,52 @@
 import React, { useState } from 'react'
 import './Register.moudle.css'
-import { createUser } from './api'
+// import { createUser } from './api'
 import BasicDetails from './BasicDetails'
 import MobileAndEmail from './MobileAndEmail'
 import PasswordSetup from './PasswordSetup'
 import OtpVerification from '../OtpVerification/OtpVerification'
+import Config from "../../../../config";
+import axios from "axios";
+import { Navigate, useNavigate } from 'react-router-dom'
+
 
 const Register = () => {
+    
+    const { apiUrl } = Config; 
+
+    const navigate = useNavigate();
+
+    // api
+    const createUser = async (userData) => {
+
+        try {
+
+            const response = await axios.post(`${apiUrl}user/signup`,userData);
+    
+            localStorage.setItem('user', JSON.stringify(response.data));
+            sessionStorage.getItem('token', response.data.token)
+            
+            navigate('/UserDashboard');
+    
+            const data = await response.json();
+            console.log(userData);
+            return data;
+    
+        } catch (error) {
+            console.log(userData);
+            console.error('Error creating user', error);
+            
+            throw error;
+        }
+    };
 
     // real Data
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({
+        company:0,
+        email:'',
         first_name: '',
         last_name: '',
-        email:'',
         mobile:'',
         password: '',
         // confirmPassword: '',

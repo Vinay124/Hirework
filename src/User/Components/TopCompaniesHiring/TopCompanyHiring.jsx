@@ -86,9 +86,9 @@ console.log(TopCompaniesJsonData.companies)
                 <h5>Top Companies</h5>
                 <span>Top Companies Hiring Software Engineer </span>
             </div>
-            <div>
-                 <button className='btn-viewAllJobs'>View all</button>
-            </div>
+                <div>
+                    <button className='btn-viewAllJobs'>View all</button>
+                </div>
         </div>
 
         <div>

@@ -1,0 +1,291 @@
+.jobdetailSection {
+    background: #fefefe;
+    padding: 1rem;
+}
+
+
+.jobDetailsMainDiv {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    padding: 3rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+}
+.backgroundImage {
+    background: #FC354C; 
+    background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C); 
+    background: linear-gradient(to right, #E9F4FC, #F7F2F3);
+    height: 15vh;
+    position: absolute;
+    width: 85.3%;
+    left: 7rem;
+    top: 7.5rem;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    z-index: 0;
+}
+
+
+.JobDetailsInnerDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.jobCardButtonDiv {
+    display: flex;
+}
+
+.btn-saveJob {
+    padding: 10px;
+    margin-right: 13px;
+    font-size: 16px;
+    color: #4f4f4f;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #646464;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+.btn-Jobapply {
+    padding: 10px 28px;
+    font-weight: 600;
+    color: #4f4f4f;
+    border-radius: 10px;
+    background: #0073FF;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.JobdetailsTitle h4{
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.JobdetailsTitle span{
+    font-weight: 600;
+    color: #4f4f4f;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.JoblocationDetails {
+    color: #4f4f4f;
+    margin-top: 0.8rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+.JobDetailsCompanyLogo {
+    width: 100px;
+    height: 100px;
+    padding: 16px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    margin: 1rem;
+    top: -1rem;
+}
+
+.companyAboutInnerCol {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    /* margin:1.5rem 2px; */
+}
+
+.about_company  h5 ,
+.JobDescriptionDetails h5,
+.JobResponsibilities h5,
+.Preferred_Qualifications h5,
+.Salary_and_Benefits h5,
+.JobBenfits h5 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+.about_company span,
+.JobDescriptionDetails span {
+    font-family: "Nunito Sans", sans-serif;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 16px;
+    color: #646464;
+}
+.JobDescriptionDetails,
+.Requirements,
+.Salary_and_Benefits,
+.JobBenfits,
+.Preferred_Qualifications {
+    margin-top: 2rem;
+}
+
+.JobResponsibilities {
+    margin-top: 1.2rem;
+}
+
+.JobResponsibilities ul li ,
+.Requirements ul li ,
+.Preferred_Qualifications ul li,
+.JobBenfits ul li{
+    font-size: 16px;
+    color: #595858;
+    font-weight: 600;
+    list-style-type: disc;
+    margin-bottom: 13px;
+}
+
+
+.Preferred_Qualifications  {
+    margin-top: 1.2rem;
+}
+
+
+.aboutcompanyDetails {
+    margin-top: 2rem !important;
+    justify-content: space-between !important;
+    display: flex !important;
+}
+
+
+.salarySectionCol {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.jobSalaryDivWrapper {
+    margin-top: 1.2rem;
+}
+
+.JobSalaryDetails {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.JobSalaryIcon {
+    padding: 14px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.salaryAvg span {
+    font-size: 18px;
+    color: #646464;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.JobsalaryTxtDiv {
+    margin-left: 1.5rem;
+}
+
+.JobsalaryTxtDiv h6{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin: 0;
+    color: #3d3c3c;
+    padding: 0;
+}
+
+.JobsalaryTxtDiv span{
+    color: #646464;
+    font-weight: 500;
+    padding-top: 3px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.about_company {
+    margin-bottom: 1rem ;
+}
+
+.referalJobs {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 3rem;
+}
+
+
+.referalJobs > div  h6{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+}
+
+.referalJobs {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 105vh;
+    margin-top: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.JobDetailcardWrapper {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0.9rem 0rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    /* height: 30vh; */
+    cursor: pointer;
+}
+
+
+.referalJobs::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 3px;
+}
+.referalJobs::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.referalJobs::-webkit-scrollbar-thumb {
+    background: #c9c9c9;
+}
+.referalJobs::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+.btn_showContent {
+    padding: 8px;
+    color: #0073FF;
+    background: transparent;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    margin-top: 1rem;
+}
+
+
+.shareJobDiv {
+    position: absolute;
+    right: 8rem;
+    display: flex;
+    top: 12.5rem;
+}
+
+.shareJobDiv ul {
+    display: flex;
+    align-items: center;
+}
+
+.shareJobDiv span {
+    color: #b8b8b8;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+.shareJobDiv ul li {
+    margin: 0 10px;
+    cursor: pointer;
+}

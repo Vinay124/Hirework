@@ -1,24 +1,31 @@
-import Config from "../../../../config";
-import axios from "axios";
 
-const { apiUrl } = Config; 
+// import Config from "../../../../config";
+// import axios from "axios";
 
-export const createUser = async (userData) => {
-    try {
-        const response = await axios.post(`${apiUrl}user/signup`, userData, {
-            headers : {
-                'Content-Type': 'application/json'
-            }
-        });
+// const { apiUrl } = Config; 
 
-        localStorage.setItem('user', JSON.stringify(response.data));
+// // const navigate = useNavigate();
 
-        const data = await response.json();
-        console.log(userData);
-        return data;
+// export const createUser = async (userData) => {
+//     try {
+//         const response = await axios.post(`${apiUrl}user/signup`, userData, {
+//             headers : {
+//                 'Content-Type': 'application/json'
+//             }
+//         });
 
-    } catch (error) {
-        console.error('Error creating user', error);
-        throw error;
-    }
-};
+//         localStorage.setItem('user', JSON.stringify(response.data));
+        
+//         // navigate('/UserDashboard');
+//         // history.push("/UserDashboard")
+//         history.push ('/UserDashboard');
+
+//         const data = await response.json();
+//         console.log(userData);
+//         return data;
+
+//     } catch (error) {
+//         console.error('Error creating user', error);
+//         throw error;
+//     }
+// };
