@@ -99,7 +99,25 @@ const TopCompaniesHiring = () => {
             </Row>
 
             <Row>
-            <Swiper spaceBetween={10} slidesPerView={4}   >
+            <Swiper spaceBetween={10} slidesPerView={4} 
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+            }}  >
               {companyHiringJson.data.map((companyHiring) => {
                 return(
                   <SwiperSlide>

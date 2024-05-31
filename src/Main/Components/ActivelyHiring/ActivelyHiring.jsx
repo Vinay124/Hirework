@@ -135,7 +135,25 @@ const ActivelyHiring = () => {
             </div>
 
             <Row>
-                <Swiper spaceBetween={5} slidesPerView={3}>
+                <Swiper spaceBetween={5} slidesPerView={3}
+              breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 10,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 10,
+                },
+                1024: {
+                  slidesPerView: 2,
+                  spaceBetween: 10,
+                },
+              }}>
                 {filteredData.map((company, index) => (
                     <SwiperSlide>
                     <div key={index}>

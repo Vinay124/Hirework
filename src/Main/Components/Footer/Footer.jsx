@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
 
         <Row className='footerMainRow'>
-          <Col className="col-lg-4">
+          <Col className="col-lg-4 col-md-12 footerMainRowCol">
             <div>
               <div className='footerTextWrapper'>
                 <div>
@@ -77,7 +77,7 @@ const Footer = () => {
             </div>
           </Col>
 
-          <Col className="col-lg-2 text-center">
+          <Col className="col-lg-2 col-md-3 text-center">
             <div className='footerinnerTxt'>
               <h6>Quick Links</h6>
             </div>
@@ -93,7 +93,7 @@ const Footer = () => {
             </div>
           </Col>
 
-          <Col className="col-lg-2 text-center">
+          <Col className="col-lg-2 col-md-3 text-center">
             <div className='footerinnerTxt'>
               <h6>For Candidates</h6>
             </div>
@@ -109,7 +109,7 @@ const Footer = () => {
             </div>
           </Col>
 
-          <Col className="col-lg-2 text-center">
+          <Col className="col-lg-2 col-md-3 text-center">
             <div className='footerinnerTxt'>
               <h6>For Employers</h6>
             </div>
@@ -125,7 +125,7 @@ const Footer = () => {
             </div>
           </Col>
 
-          <Col className="col-lg-2 text-center">
+          <Col className="col-lg-2 col-md-3 text-center">
             <div className='footerinnerTxt'>
               <h6>Download App</h6>
             </div>

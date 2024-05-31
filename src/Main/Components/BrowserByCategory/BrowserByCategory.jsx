@@ -122,7 +122,7 @@ const BrowserByCategory = () => {
             <Row className='BrowserByCategories '>
                 {jobsCategorys.data.map((browserByCategory) => {
                     return(
-                    <Col className='col-lg-2' key={browserByCategory.id}>
+                    <Col className='col-lg-3 col-md-6' key={browserByCategory.id}>
                         <div className='CardWrapper'>
                             <div className='CardIcon'>
                                 <img src={browserByCategory.CategoryIcon} alt="" />

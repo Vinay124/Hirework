@@ -1,0 +1,161 @@
+@media only screen and (max-width: 480px) {
+    
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .navbar-Main {
+        display: none !important;
+    }
+    .main_banner_section > div h1 {
+        width: 100% !important;
+    }
+
+    .main_banner_section > div p {
+        width: 100% !important;
+    }
+    .formInputwrapper {
+        /* flex-direction: column; */
+        width: 120% !important;
+        left: -3rem !important;
+    }
+    .suggestionUl {
+        padding: 0 !important;
+        width: 40rem !important;
+        left: 13% !important;
+    }
+    .dropdownButtonWrappers{
+        margin: 1rem 0rem;
+    }
+    .DownloadappRow {
+        flex-direction: column;
+    }
+    .SuggestionTags {
+        position: relative;
+        right: 7rem !important;
+    }
+    .inputSearchField input,
+    .locationInput input,
+    .selectorExperienceArea .selectorArea {
+        width: 8rem !important;
+    }
+    .BrowserSection .BrowserSectionHeadding > div h1 {
+        font-size: 2rem;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .navbar-Main {
+        display: none !important;
+    }
+
+    .main_banner .main_banner_section > div h1 {
+        width: 80%;
+    }
+    .main_banner .selectorExperienceArea .selectorArea {
+        width: 100%;
+    }
+    .main_banner .suggestionUl{
+        left: 0%;
+    }
+
+    .main_banner .main_banner {
+        background-size: contain;
+    }
+    .main_banner .formInputwrapper {
+        margin-top: 4rem;
+        width: 100%;
+    }
+    .BrowserSection {
+        padding: 2rem !important;
+    }
+    .BrowserSection .CardWrapper {
+        padding: 25px;
+    }
+
+    .ActivelyHiring .dropdownButtonWrappers {
+        margin: 1rem 0rem !important;
+    }
+    .ActivelyHiring .ActivelyHiringcard {
+        height: 82vh;
+    }
+    .DownloadApp {
+        margin: 1rem 2rem !important;
+    }
+    .footerMainRow .footerMainRowCol {
+        margin-bottom: 3rem;
+    }
+    .copyrightMenus ul li{
+        font-size: 12px;
+    }
+    .copyright_section  {
+        align-items: unset;
+    }
+    .copyright_section > div h6 {
+        font-weight: 400;
+        font-size: 13px;
+    }
+    .main_banner_section > div p {
+        width: 80%;
+    }
+  
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+    .navbar-Main .nav-menuData {
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar-Main .nav-menuData li {
+        margin:10px 6px;
+    }
+
+    .btn-Recruiter {
+        padding: 10px 8px;
+        font-size: 15px;
+    }
+
+    .btn-jobseeker {
+        padding: 10px 8px;
+        font-size: 15px;
+    }
+
+    .main_banner {
+        background-size:cover;
+    }
+
+    .submenuWrapper  {
+        left: 12rem;
+    }
+    .downloadApp {
+        width: 45px;
+    }
+
+    .main_banner_wrapper .main_banner_section > div h1{
+        width: 60%;
+    }
+    .main_banner_wrapper .main_banner_section > div p {
+        width: 60%;
+    }
+    .main_banner .formInputwrapper {
+        width: 90%;
+    }
+
+    .main_banner .suggestionUl {
+        left: 10%;
+    }
+
+}
+
+@media only screen and (min-width: 1920px)  {
+  
+}
+
+@media only screen and (min-width: 1200px)  {
+  
+}
+
+@media only screen and (min-width: 1600px) {
+  
+}

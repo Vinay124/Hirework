@@ -182,3 +182,312 @@
     color: #474d6a;
 }
 
+.ResumeDivWrapper {
+    background: #ffffff;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.ResumeDivWrapperHeaddingdiv  h4{
+    margin-bottom: 5px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.ResumeIconDiv {
+    padding: 10px;
+    background: #ffffff;
+    align-items: center;
+    margin: 0 16px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 45px;
+    width: 45px;
+}
+
+.resumeWrapperInnerDiv {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 1.1rem;
+    cursor: pointer;
+}
+
+.resumeWrapperInnerDiv > div h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin: 0;
+}
+
+.DeleteButton,.downloadIcon {
+    padding: 10px;
+    background: #ffffff;
+    align-items: center;
+    margin: 0 16px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 45px;
+    width: 45px;
+    color: #0073FF;
+}
+
+.DeleteandDownloadIcon {
+    display: flex;
+}
+
+.ResumedivWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.uploadResumeDiv {
+    padding: 2rem;
+    border: 2px dashed #ebebeb;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 1.5rem;
+}
+
+.btn-uploadResume {
+    padding: 10px 12px;
+    color: #ffffff;
+    background: #0073FF;
+    outline: none;
+    border: 1.1px solid transparent;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.btn-uploadResume:hover{
+    color: #0073FF;
+    background: transparent;
+    transition: all .3s ease;
+    border: 1.1px solid #0073FF;
+}
+
+.uploadResumeDiv > div span {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #c7c4c4;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.employmentDiv {
+    background: #ffffff;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.employeeHeadding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.employeeHeadding > div h4 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 660;
+}
+.employeeHeadding > div span{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.companyImage img{
+    width: 45px;
+    height: 45px;
+    margin-right: 1rem;
+}
+
+.employeementBody {
+    padding: 1rem;
+}
+
+.companyNameAndType h6{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    margin: 0;
+}
+
+.companyNameAndType {
+    display: flex;
+}
+
+.companyNameAndType span {
+    margin-left: 1.5rem;
+    background: #f3f3f3;
+    color: #7d7d7d;
+    padding: 3px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.companyNameAndType {
+    position: relative;
+}
+
+
+.experienceDivMain {
+    display: flex;
+    margin: 2rem 10px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.exp_rolesWrap{
+    display: flex;
+}
+
+.Exp_Role > span {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+}
+
+.job_startdate > span {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+}
+
+.job_endDate > span {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+}
+
+.skills_div span{
+    display: inline-flex;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.skills_div ul{
+    display: flex;
+    padding: 0;
+}
+
+.skills_div ul li{
+    margin: 0 10px;
+    font-size: 13px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    color: #7d7d7d;
+}
+
+.notice_period h6 {
+    font-weight: 500;
+    margin: 10px 0;
+    font-size: 13px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.jobDescriptiondiv p {
+    font-size: 13px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* .addressdiv */
+.EducationDiv{
+    background: #ffffff;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.EducationinnerDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.EducationinnerDiv > div span {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #7d7d7d;
+}
+.EducationinnerDiv > div h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 660;
+}
+
+
+.educationInnerWrapper {
+    margin: 1rem 0;
+}
+
+.educationInnerWrapper > div h6 {
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.educationInnerWrapper > div span {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #575656;
+}
+
+.edu_year span{
+    font-weight: 500;
+}
+
+.edu_year span:last-child{
+    margin: 0 1rem;
+}
+
+.skillsDivWrapper {
+    background: #ffffff;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.skillsDivMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skillsDivMain > div h4{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 660;
+}
+.skillsDivMain > div span{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #575656;
+}
+
+.skillMain {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skillMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 10px 11px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    font-size: 14px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+}
+
+.userProfileSkills {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 1.7rem;
+}
