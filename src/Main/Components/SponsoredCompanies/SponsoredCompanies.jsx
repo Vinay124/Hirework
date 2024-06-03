@@ -135,6 +135,10 @@ const SponsoredCompanies = () => {
                       slidesPerView: 1,
                       spaceBetween: 10,
                     },
+                    651: {
+                      slidesPerView: 1,
+                      spaceBetween: 8,
+                    },
                     640: {
                       slidesPerView: 2,
                       spaceBetween: 10,

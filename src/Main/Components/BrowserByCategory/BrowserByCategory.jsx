@@ -103,43 +103,45 @@ const BrowserByCategory = () => {
 
   return (
     <>
-    <section className='BrowserSection'>
-        <Container>
-            <Row>
-                <Col>
-                    <div className='BrowserSectionHeadding'>
-                        <div>
-                            <h1>Browse by category</h1>
-                            <p>Recruitment Made Easy in 100 seconds</p>
-                        </div>
-                        <div className='categories'>
-                            <h5>All Categories <IoIosArrowForward/></h5>
-                        </div>
-                    </div>
-                </Col>
-            </Row>
-
-            <Row className='BrowserByCategories '>
-                {jobsCategorys.data.map((browserByCategory) => {
-                    return(
-                    <Col className='col-lg-3 col-md-6' key={browserByCategory.id}>
-                        <div className='CardWrapper'>
-                            <div className='CardIcon'>
-                                <img src={browserByCategory.CategoryIcon} alt="" />
+    <section  id='browserSectionid'>
+        <div className='BrowserSection'>
+            <Container>
+                <Row>
+                    <Col>
+                        <div className='BrowserSectionHeadding'>
+                            <div>
+                                <h1>Browse by category</h1>
+                                <p>Recruitment Made Easy in 100 seconds</p>
                             </div>
-                            <div className='CardName'>{browserByCategory.CategoryName}</div>
-                            <div className='cardNameWrapper'>
-                                <div className='CardArrowIcon'>{browserByCategory.jobAvaliablity}</div>
-                                <div>
-                                    <IoIosArrowForward size={20} className='categoryIcon'/>
-                                </div>
+                            <div className='categories'>
+                                <h5>All Categories <IoIosArrowForward/></h5>
                             </div>
                         </div>
                     </Col>
-                    )
-                })}
-            </Row>
-        </Container>
+                </Row>
+
+                <Row className='BrowserByCategories '>
+                    {jobsCategorys.data.map((browserByCategory) => {
+                        return(
+                        <Col className='col-lg-3 col-md-6 col-sm-12' key={browserByCategory.id}>
+                            <div className='CardWrapper'>
+                                <div className='CardIcon'>
+                                    <img src={browserByCategory.CategoryIcon} alt="" />
+                                </div>
+                                <div className='CardName'>{browserByCategory.CategoryName}</div>
+                                <div className='cardNameWrapper'>
+                                    <div className='CardArrowIcon'>{browserByCategory.jobAvaliablity}</div>
+                                    <div>
+                                        <IoIosArrowForward size={20} className='categoryIcon'/>
+                                    </div>
+                                </div>
+                            </div>
+                        </Col>
+                        )
+                    })}
+                </Row>
+            </Container>
+        </div>
     </section>
     </>
   )

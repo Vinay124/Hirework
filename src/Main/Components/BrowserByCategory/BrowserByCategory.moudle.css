@@ -1,5 +1,8 @@
-.BrowserSection {
+#browserSectionid {
     background: linear-gradient(180deg, #EDF5F3 0%, #FFFFFF 100%);
+}
+
+.BrowserSection {
     padding: 5rem;
 }
 

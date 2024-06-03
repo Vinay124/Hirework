@@ -188,3 +188,190 @@
     color: #1b1b1b;
     font-family: 600;
 }
+
+
+.mobileHeader {
+    padding: 25px 30px;
+    align-items: center;
+    display: flex;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 12;
+    top: -2px;
+    background: rgb(255, 255, 255);
+}
+
+.hamburger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#MobileLogo {
+    margin-left: 4rem;
+}
+
+#MobileLogo h3 {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .hamburger-menu {
+    position: relative;
+  }
+  
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .hamburger-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #333;
+  }
+  
+  .menu-items {
+    position: absolute;
+    padding: 2rem;
+    top: 133%;
+    height: 88.5vh;
+    left: -1.98rem;
+    background: #fff;
+    width: 24rem;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    justify-content: space-between;
+  }
+  
+  .menu-items a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 0;
+  }
+  
+
+/* .menu-ItemsWrapper {
+    padding: 2rem;
+} */
+
+.menu-items ul {
+    padding: 0;
+}
+
+.menu-items ul li{
+    font-size: 20px;
+    margin-bottom: 18px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.mobileSubmens {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobileIconWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobileSubmens ul {
+    margin-top: 16px;
+    font-weight: 500;
+}
+
+.mobileSubmens ul li {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.mobileNavigationWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobileNavigationWrapper span {
+    font-size: 20px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin-left: 1rem;
+}
+
+.Googleplay {
+    padding: 13px;
+    background: #ffffff;
+    color: #0073FF;
+    border-radius: 16px;
+    font-size: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    display: flex;
+    align-items: center;
+}
+.Googleplay  span{
+    font-size: 16px;
+}
+
+.appStore {
+    padding: 13px;
+    background: #ffffff;
+    color: #0073FF;
+    border-radius: 16px;
+    font-size: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    display: flex;
+    align-items: center;
+}
+.appStore  span{
+    font-size: 16px;
+}
+
+
+.mobileHeader {
+    display: none;
+}

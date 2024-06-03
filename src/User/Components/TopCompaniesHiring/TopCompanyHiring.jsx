@@ -95,6 +95,10 @@ console.log(TopCompaniesJsonData.companies)
             <Row className='topCompanyHiringRowDiv'>
               <Swiper spaceBetween={0} slidesPerView={1.7}
               breakpoints={{
+                651: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
                 640: {
                   slidesPerView: 2,
                   spaceBetween: 20,

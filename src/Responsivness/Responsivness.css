@@ -1,10 +1,178 @@
 @media only screen and (max-width: 480px) {
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .main_banner {
+        background-size: inherit;
+        padding-bottom: 6rem;
+    }
+    .mobileHeader {
+        display: block;
+    }
+    .navbar-Main {
+        display: none ;
+    }
+    .main_banner .main_banner_section{
+        padding-top: 10rem; 
+    }
+    .main_banner .formInputwrapper {
+        flex-direction: column !important;
+        width: 100%;
+    }
+    .main_banner_section > div h1 {
+        width: 100%;
+    }
+    .main_banner {
+        height: 135vh;
+    }
     
+    .main_banner_section > div p {
+        width: 90%;
+    }
+    .inputSearchField input {
+        width: 20rem;
+    }
+    .locationInput {
+        margin-top: 2rem;
+    }
+    
+    .selectorExperienceArea .selectorArea {
+        margin-top: 2rem;
+        width: 19.5rem;
+    }
+    .suggestionUl {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        left: -16px;
+        padding: 0;
+        width: 100%;
+        margin-bottom: 6rem;
+    }
+    .suggestionUl li {
+        margin-top: 2rem;
+    }
+    
+    .suggestionUl li > div a {
+        font-size: 18px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .searchSuggestionDivs a{
+        font-size: 20px;
+    }
+    .BrowserSection {
+        padding: 1rem;
+        margin-top: 6rem;
+    }
+    .BrowserSectionHeadding {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .companyHiringCardWrapper {
+        margin: 2rem 16px;
+    }
+    .companyHiringCardWrapper .companyImages {
+        justify-content: space-around;
+    }
+    .dropdownButtonWrappers {
+        margin: 1rem 0%;
+    }
+    .SponsoredHiringHeadding p{
+        width: 75%;
+    }
+    .DownloadApp {
+        margin: 1rem;
+        margin-bottom: 5rem;
+    }
+    .DownloadappRow {
+        flex-direction: column;
+        text-align: center;
+    }
+    .playStoreDownload, .AppstoreDownload {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .DownloadAppBanner {
+        padding-bottom: 1.2rem;
+    }
+
+    .DownloadApp {
+        padding: 2rem;
+    }
+    
+    .btn-search {
+        padding: 10px 18px;
+    }
+    .BrowserByCategories,
+    .footerinnerDiv,.followUsdiv,
+    .footerMainRow {
+        flex-direction: column;
+    }
+    .BrowserSectionHeadding > div h1 {
+        font-size: 1.6rem;
+    }
+    .footerMainRowCol,
+    .quickLinksCol,
+    .ForEmployersCol,
+    .ForCandidatesCol  {
+        text-align: left !important;
+        margin: 1.8rem 0;
+    }
+    .quickLinks ul li,
+    .ForCandidates ul li,
+    .ForEmployers ul li {
+        font-size: 16px;
+    }
+    .footerinnerTxt h6{
+        font-size: 18px;
+    }
+    .AppStoreImage,.GoogleplayImage {
+        width: 150px;
+    }
+    .copyright_section {
+        flex-direction: column;
+    }
+    .newsLetterForm input {
+        width: 80%;
+    }
+    .menu-items{
+        position: absolute;
+        padding: 2rem;
+        top: 117%;
+        height: 88.5vh;
+        left: -1.98rem;
+        background: #fff;
+        width: 20rem;
+        border: 1px solid #ccc;
+        border-top: none;
+        display: flex;
+        flex-direction: column;
+        box-shadow: rgb(145 145 145 / 30%) 3px 20px 14px 0px, rgb(12 11 11 / 15%) 0px 2px 15px 2px;
+        justify-content: space-between;
+    }
+    .mobileNavigationWrapper .appStore  span,
+    .mobileNavigationWrapper .Googleplay  span{
+        display: none;
+    }
+    .ActivelyHiringHeadding p {
+        width: 80%;
+    }
+    .footerDownloadIcons {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
+    .mobileHeader {
+        display: block;
+    }
     .navbar-Main {
-        display: none !important;
+        display: none ;
     }
     .main_banner_section > div h1 {
         width: 100% !important;
@@ -14,7 +182,6 @@
         width: 100% !important;
     }
     .formInputwrapper {
-        /* flex-direction: column; */
         width: 120% !important;
         left: -3rem !important;
     }
@@ -45,8 +212,11 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .mobileHeader {
+        display: block;
+    }
     .navbar-Main {
-        display: none !important;
+        display: none ;
     }
 
     .main_banner .main_banner_section > div h1 {
@@ -110,6 +280,9 @@
     .navbar-Main .nav-menuData li {
         margin:10px 6px;
     }
+    .main_banner_section {
+        padding-top: 13rem;
+    }
 
     .btn-Recruiter {
         padding: 10px 8px;
@@ -158,4 +331,157 @@
 
 @media only screen and (min-width: 1600px) {
   
+}
+
+
+
+/* Portrate and LandScape */
+@media only screen and (min-device-width: 651px) and (max-device-width: 768px) {
+    .ActivelyHiring .dropdownButtonWrappers {
+        margin: 1rem 0;
+    }
+    .main_banner .main_banner_section {
+        padding-top: 10rem;
+    }
+    #browserSectionid .BrowserSection {
+        padding:2rem 1rem !important;
+
+    }
+    .BrowserSection .BrowserSectionHeadding > div h1 {
+        font-size: 1.5rem;
+    }
+    .DownloadApp {
+        margin: 1rem 2rem !important;
+        text-align: center;
+    }
+    .downloadAppText {
+        margin-top: 1.5rem;
+    }
+    .playStoreDownload, .AppstoreDownload {
+        text-align: center;
+    }
+    .categories h5 {
+        font-size: 1rem;
+        display: flex;
+        align-self: center;
+        font-weight: 600;
+    }
+    .BrowserSectionHeadding > div p {
+        font-size: 0.9rem;
+        width: 80%;
+    }
+    .BrowserSectionHeadding > div h1 {
+        font-size: 1.4rem;
+    }
+    .companyImages {
+        justify-content: space-around;
+    }
+    .ActivelyHiringHeadding p,
+    .SponsoredHiringHeadding p {
+        width: 85%;
+    }
+
+    .footerMainRowCol {
+        margin-bottom: 2.5rem;
+    }
+
+    /* .ForCandidatesCol,
+    .ForEmployersCol, */
+    
+    .downloadAppCol,
+    .ForEmployersCol {
+        margin-top: 2rem;
+    }
+    .footerinnerTxt h6{
+        font-size: 20px;
+    }
+    .copyright_section {
+        display: flex;
+        flex-direction: column;
+    }
+    .copyrightMenus {
+        margin-top: 1rem;
+    }
+
+    .quickLinks ul li, .ForCandidates ul li, .ForEmployers ul li {
+        font-size: 16px;
+    }
+    .main_banner {
+        height: 100vh;
+    }
+    .formInputwrapper {
+        flex-direction: column;
+    }
+    .inputSearchField input, 
+    .locationInput input, 
+    .selectorExperienceArea .selectorArea{
+        width: 33rem !important;
+        align-items: baseline !important;
+        margin-top: 2rem;
+    }
+}
+
+
+
+/* Landscape orientation */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .mobileHeader {
+        display: block;
+    }
+    .main_banner .main_banner_section {
+        padding-top: 10rem;
+    }
+    .navbar-Main {
+        display: none ;
+    }
+    #browserSectionid {
+        padding: 1rem 1rem !important;
+    }
+    
+    .main_banner .main_banner_section > div h1 {
+        width: 80%;
+    }
+    .main_banner .selectorExperienceArea .selectorArea {
+        width: 100%;
+    }
+    .main_banner .suggestionUl{
+        left: 0%;
+    }
+
+    .main_banner .main_banner {
+        background-size: contain;
+    }
+    .main_banner .formInputwrapper {
+        margin-top: 4rem;
+        width: 100%;
+    }
+    .BrowserSection .CardWrapper {
+        padding: 25px;
+    }
+
+    .ActivelyHiring .dropdownButtonWrappers {
+        margin: 1rem 0rem !important;
+    }
+    .ActivelyHiring .ActivelyHiringcard {
+        height: 82vh;
+    }
+    .DownloadApp {
+        margin: 1rem 2rem !important;
+    }
+    .footerMainRow .footerMainRowCol {
+        margin-bottom: 3rem;
+    }
+    .copyrightMenus ul li{
+        font-size: 12px;
+    }
+    .copyright_section  {
+        align-items: unset;
+    }
+    .copyright_section > div h6 {
+        font-weight: 400;
+        font-size: 13px;
+    }
+    .main_banner_section > div p {
+        width: 80%;
+    }
 }

@@ -105,8 +105,12 @@ const TopCompaniesHiring = () => {
                 slidesPerView: 1,
                 spaceBetween: 10,
               },
+              620: {
+                slidesPerView: 1,
+                spaceBetween: 5,
+              },
               640: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 10,
               },
               768: {
