@@ -15,6 +15,8 @@ import JobDetail from './User/Pages/JobDetail/JobDetail'
 
 // Profile
 import UserProfileDetails from './User/Components/UserProfileDetails/UserProfileDetails'
+import Test from './Test'
+import RecruiterRegister from './Recruiter/Components/RecruiterLogin/RecruiterSignup/RecruiterRegister'
 
 
 function App() {
@@ -29,8 +31,12 @@ function App() {
         <Route path="/JobSeekerLogin" element={<JobSeekerLogin/>}/>
         <Route path='/Register' element={<Register/>}/>
 
+        <Route path='/Test' element={<Test/>}/>
+
         {/* Recruiter Login */}
         <Route path="/RecruiterLogin" element={<RecruiterLogin/>}/>
+        <Route path="/RecruiterRegister" element={<RecruiterRegister/>}/>
+        
         <Route path='/ForgotPassword' element={<ForgotPassword/>}/>
 
         {/* UserDashboard  */}
@@ -44,6 +50,11 @@ function App() {
         
         {/* Profile Details */}
         <Route path='/UserDashboard/UserProfileDetails' element={<UserProfileDetails/>}/>
+      
+      {/* RecruterDashboard */}
+      {/* <Route path='' */}
+
+      
       </Routes>
     </Router>
       

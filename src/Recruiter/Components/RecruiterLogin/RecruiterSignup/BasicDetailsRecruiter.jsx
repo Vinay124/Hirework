@@ -1,62 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import './RecruiterLogin.moudle.css'
+import React from 'react'
 import {Container, Row, Col} from 'react-bootstrap'
-import RecruiterNavigation from '../Navigation/RecruiterNavigation'
-import { Link, useNavigate } from 'react-router-dom'
+import RecruiterNavigation from '../../Navigation/RecruiterNavigation'
+import { Link } from 'react-router-dom'
 import { RiCloseLargeLine } from 'react-icons/ri'
-import Config from '../../../../config'
 
-const RecruiterLogin = () => {
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('')
-  const [attempts, setAttempts] = (0);
-
-  const maxAttempth = 4;
-  const waitTimeMs = 120000;
-
-  const {apiUrl} = Config;
-
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const token = sessionStorage.getItem('recruiterToken');
-
-    if (token) {
-      navigate('/UserDashboard');
-    }
-  },[]);
-
-  const handleLogin = async (e) => {
-    e.preventDefault();
-
-    if (attempts >= maxAttempth){
-      setError('You have reached the maximum login attempts. Please try again later.');
-      return;
-    }
-
-    try {
-      const responseData = await axios.post(`${apiUrl}user/login`,{ email, password });
-      if (responseData.status === 200) {
-        const RecruterToken = responseData.data.data.token
-        navigate('/UserDashboard');
-        sessionStorage.setItem('recruiterToken', RecruterToken);
-      } else {
-        console.log('Login Failed... please try again later')
-      }
-    } catch (error) {
-      setError('Invalid userName or password');
-      setAttempts(attempts + 1);
-      setTimeout(() => {
-        setError('');
-      }, waitTimeMs);
-    }
-  };
-
+const BasicDetailsRecruiter = () => {
   return (
-    <>
-    {/* <RecruiterNavigation/> */}
     <section>
         <Row className='p-0 m-0'>
           <Col className='col-lg-5 p-0 m-0'>
@@ -84,46 +34,49 @@ const RecruiterLogin = () => {
               {/* text */}
               <div className='loginWrapperHeadding'>
               <h2 className='text-center'> Welcome </h2>
-                  <span>Login for Recruiter</span>
+                  <span>Recruiter Signup </span>
               </div>
                 <div className='inputMainBox'>
                   <form 
-                  onSubmit={handleLogin}
+                  // onSubmit={handleLogin}
                   >
                     <div className='inputBoxWrapper'>
                       <input 
                        type="email"
                        name='email'
-                       value={email}
-                       onChange={(e) => setEmail(e.target.value)}
+                      //  value={email}
+                      //  onChange={(e) => setEmail(e.target.value)}
                       />
                       <label>Email</label>
+                      {/* ifLogin email error */}
+                      <span></span>
                     </div>
                     {/* passwordBox */}
                     <div className='inputBoxWrapper'>
                       <input 
                        type="password"
-                       value={password}
+                      //  value={password}
                        name="password"
-                       onChange={(e) => setPassword(e.target.value)}
+                      //  onChange={(e) => setPassword(e.target.value)}
                       />
                       <label>Password</label>
                       {/* ifLogin password error */}
-                      {error && <p style={{ color: 'red',textAlign:'start' }}>{error}</p>}
+                      {/* {error && <p style={{ color: 'red',textAlign:'start' }}>{error}</p>} */}
                     </div>
 
-                    <div className='forgotPasswordDiv'>
+                    {/* <div className='forgotPasswordDiv'>
                       <span>
                       <Link to="/ForgotPassword">Forgot Password</Link></span>
-                    </div>
+                    </div> */}
 
                     {/* button */}
-                    <button type="submit" className='btn-signin'>Login</button>
+                    <button type="submit" className='btn-signin'>Next</button>
                   </form>
+
                   <div className='suggestionsDiv'> 
                     <div>
-                      <span>Don’t have an account? </span>
-                      <Link to="/Register">Sign Up for free</Link>
+                      <span>Already Registered? </span>
+                      <Link to="/Register">Login here</Link>
                     </div> 
                   </div>
                 </div>
@@ -132,8 +85,7 @@ const RecruiterLogin = () => {
           </Col>
         </Row>
     </section>
-    </>
   )
 }
 
-export default RecruiterLogin
+export default BasicDetailsRecruiter

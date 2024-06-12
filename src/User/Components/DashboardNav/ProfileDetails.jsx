@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Profileimage from '../../../assets/usersIcon/UserAvatar.jpg'
 import { MdOutlineLogout } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5"
@@ -12,9 +12,10 @@ import ProgressBar from "@ramonak/react-progress-bar";
 import axios from 'axios'
 import Config from '../../../../config';
 import { Link, useNavigate } from 'react-router-dom';
+import { TbSettingsStar } from 'react-icons/tb';
 
 
-const ProfileDetails = ({ submenuData, UserData }) => {
+const ProfileDetails = ({ submenuData, UserData, getProfileImage }) => {
 
 
   const NavLinks = {
@@ -80,7 +81,6 @@ const ProfileDetails = ({ submenuData, UserData }) => {
   
 
   const tokenID = sessionStorage.getItem('token');
-  console.log(tokenID)
 
   const handleLogout = async () => {
     try {
@@ -91,6 +91,41 @@ const ProfileDetails = ({ submenuData, UserData }) => {
       console.log('LogoutFailed',error)
     }
   };
+
+  const userName = localStorage.getItem('name');
+  const jobRole = localStorage.getItem('jobRole');
+
+      const [newNum, setNewNum] = useState(0);
+      const [barColor, setBarColor] = useState('#69aaf9');
+
+
+      const fetchScore = async () => {
+        try {
+        //   const response = await fetch('https://api.example.com/score'); // Replace with your API endpoint
+        //   const data = await response.json();
+        // localStorage.setItem('newScore', newScore);
+          const newdata = localStorage.getItem('newScore');
+          if (newdata >= 0 && newdata <= 100) {
+            setNewNum(newdata);
+          }
+        } catch (error) {
+          console.error('Error fetching score:', error);
+        }
+      };
+
+      useEffect(() => {
+        fetchScore();
+      }, []);
+
+      useEffect(() => {
+          if (newNum <= 30) {
+              setBarColor('#FF0000');
+          } else if (newNum <= 70) {
+              setBarColor('#FFA500');
+          } else {
+              setBarColor('#008000');
+          }
+      }, [newNum]);
 
 
   return (
@@ -104,11 +139,11 @@ const ProfileDetails = ({ submenuData, UserData }) => {
                 <div className='profileDropdownDetails'>
                     <div className='profileDetailsWrapperDiv'>
                       <div className='userimage'>
-                        <img src={userinfo.user_image} className='' alt=''/>
+                        <img src={getProfileImage} className='' alt=''/>
                       </div>
                       <div>
-                        <h4>{userinfo.userName}</h4>
-                        <span>{userinfo.role}</span>
+                        <h4>{userName}</h4>
+                        <span>{jobRole}</span>
                         <div>
                           <Link to="/UserDashboard/UserProfileDetails">
                             <button className='btn-viewandUpdate'>View and Update Profile</button>
@@ -118,13 +153,15 @@ const ProfileDetails = ({ submenuData, UserData }) => {
                     </div>
 
                     <div className='progressBarDiv mb-3'>
-                      <ProgressBar completed={50}
-                      height='10px'
-                      baseBgColor='#dddddd'
-                      bgColor='#69aaf9'
-                      width='80%'
-                      style={{margin:'0 auto'}}
-                      labelSize='0' />
+                      <ProgressBar completed={`${newNum}`}
+                        height='14px'
+                        baseBgColor='#dddddd'
+                        bgColor={`${barColor}`}
+                        style={{margin:'0 auto'}}
+                        labelSize='0'
+                        width='90%'
+                        borderRadius='5px'
+                      />
                     </div>
 
                 </div>

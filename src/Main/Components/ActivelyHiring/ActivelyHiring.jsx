@@ -154,7 +154,7 @@ const ActivelyHiring = () => {
                   spaceBetween: 10,
                 },
                 1024: {
-                  slidesPerView: 2,
+                  slidesPerView: 4,
                   spaceBetween: 10,
                 },
               }}>

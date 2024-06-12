@@ -10,7 +10,6 @@ import Config from '../../../../config'
 
 const JobSeekerLogin = () => {
 
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -41,7 +40,6 @@ const JobSeekerLogin = () => {
     }
 
     try {
-      // const responseData = await axios.post('https://f79a-2405-201-d028-1099-5129-4725-86d8-b26f.ngrok-free.app/hirework/web/user/login',{ email, password,});
       const responseData = await axios.post(`${apiUrl}user/login`,{ email, password,});
       if (responseData.status === 200) {
         const UserToken = responseData.data.data.token;
@@ -96,20 +94,20 @@ const JobSeekerLogin = () => {
               </div>             
             </div>
           </Col>
-          <Col className='col-lg-7 p-0 m-0 jobseekerCol'>
 
-        <div className='backtoHomeBtn'>
-        <Link to="/">
-            <button className='Backto_mainUi'><RiCloseLargeLine size={26}/></button>
-            </Link>
-        </div>
-          <div className='loginWrapper'>
-        <div className='forminnerdiv'>
-        {/* text */}
-        <div className='loginWrapperHeadding'>
-        <h2> Welcome Guest</h2>
-            <span>Login for Hire Work</span>
-        </div>
+          <Col className='col-lg-7 p-0 m-0 jobseekerCol'>
+              <div className='backtoHomeBtn'>
+                <Link to="/">
+                  <button className='Backto_mainUi'><RiCloseLargeLine size={26}/></button>
+                </Link>
+              </div>
+                <div className='loginWrapper'>
+              <div className='forminnerdiv'>
+              {/* text */}
+              <div className='loginWrapperHeadding'>
+              <h2> Welcome Guest</h2>
+                  <span>Login for Hire Work</span>
+              </div>
                 <div className='inputMainBox'>
                   <form onSubmit={handleLogin}
                   >
@@ -138,7 +136,6 @@ const JobSeekerLogin = () => {
                     </div>
 
                     <div className='forgotPasswordDiv'>
-                     
                       <span>
                       <Link to="/ForgotPassword">Forgot Password</Link></span>
                     </div>

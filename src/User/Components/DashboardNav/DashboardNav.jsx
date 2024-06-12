@@ -267,7 +267,9 @@ const DashboardNav = () => {
                 "description": "Seeking an HR coordinator with strong organizational skills and experience in recruitment and employee relations. HR certification is a plus."
             }
         ]
-    }
+    };
+
+    const getProfileImage = localStorage.getItem('profilePhoto');
 
 
   return (
@@ -291,7 +293,6 @@ const DashboardNav = () => {
                                     {menudata.name}
                                 </div>
                             </Link>
-
                            {menudata.submenus && submenus === menudata.id && (
                                 <DashboardSubMenus submenuData={menudata.submenus}/>
                            )}
@@ -363,13 +364,13 @@ const DashboardNav = () => {
                 <span>20</span>
             </div>
             <div className='accountUserImage'>
-                <img src={UserAvatar} className=''/>
+                <img src={getProfileImage} className=''/>
             </div>
             <IoIosArrowDown size={20} onClick={openPopup}/>
         </div>
         {/* user info */}
         {openUserSetting && (
-            <ProfileDetails UserData={UserData} close={openPopup} openUserSetting={openUserSetting}/>
+            <ProfileDetails getProfileImage={getProfileImage} UserData={UserData} close={openPopup} openUserSetting={openUserSetting}/>
         )}
 
         {/* Notification */}

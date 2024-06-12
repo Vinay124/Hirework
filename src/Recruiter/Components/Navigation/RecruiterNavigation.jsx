@@ -24,13 +24,14 @@ const RecruiterNavigation = () => {
 
   return (
     <>
-    <nav className=''>
+    <nav className='recruiterNav'>
+      <div className='recruiterNavMainDiv'>
         <div className='LogoHeadding'>
             <h3>Hire <span>Work</span></h3>
         </div>
 
       {/* Nav */}
-        <div>
+        <div className='recruiterNavigaction'>
           <ul>
             {NavigationData.map((data) => {
               return (
@@ -41,10 +42,11 @@ const RecruiterNavigation = () => {
         </div>
           
           {/* Buttons */}
-        <div>
-          <button>Login</button>
-          <button>Sign Up</button>
+        <div >
+          <button className='btn-Recruiterlogin'>Login</button>
+          <button className='btn-RecruiterSignUp'>Sign Up</button>
         </div>
+      </div>
     </nav>
   </>
   )

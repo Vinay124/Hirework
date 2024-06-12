@@ -1,0 +1,174 @@
+.recruterLoginFirstColdiv {
+    background: #275AE6;
+    height: 100vh;
+    position: relative;
+    border-radius: 16px;
+}
+    
+.recruterLoginFirstColdiv::before {
+    position: absolute;
+    content: '';
+    background: url('../../../assets/Banner/recruterLogin.png') no-repeat;
+    width: 70%;
+    height: 50%;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+    top: 22rem;
+    left: 3rem;
+    opacity: 0.8;
+}
+
+.recruterLoginHeadding {
+    color: #fff;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.recruiterLoginDashboard {
+    padding: 2rem;
+}
+
+.RecruiterloginForm {
+    padding: 2rem;
+    margin: 5rem;
+}
+
+.RecruiterEmail {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.RecruiterPassword {
+    display: flex;
+    flex-direction: column;
+}
+/* 
+.RecruiterEmailInput {
+    padding: 10px 5px;
+    outline: none;
+}
+
+.RecruiterPasswordInput {
+    padding: 10px 5px;
+    outline: none;
+} */
+
+.btn-Recruiterlogin {
+    padding: 10px 20px;
+    color: #f9f9f9;
+    background: #275AE6;
+}
+    
+.descriptionData {
+    padding: 5rem;
+}
+.descriptionData h1 {
+    color: #ebebeb;   
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+}
+.descriptionData p {
+    color: #e6e6e6;   
+    font-family: "Plus Jakarta Sans", sans-serif;
+    width: 80%;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+/* recruiter login details */
+
+.recruiterinnerDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.recruiterLabel,
+.recruiterCompanyTypeLabel {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: rgb(118, 118, 118);
+    text-transform: capitalize;
+    margin: 10px 0 8px 0px;
+}
+
+
+.recruiterfullName,
+.recruiterCompanyType {
+    width: 100%;
+    padding: 9px 10px;
+    outline: none;
+    border: 1px solid #f1f1f1;
+    border-top-left-radius: 8px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    border-bottom-left-radius: 8px;
+    text-transform: capitalize;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; 
+}
+
+.recruiterfullName:focus,
+.recruiterCompanyType:focus {
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; 
+}
+
+/* recruiter Buttons*/
+.recruiterButtonWrapper {
+    display: flex;
+    justify-content: end;
+    margin-top: 2.2rem;
+}
+
+
+.btn_recruiter_Next ,
+.btn_recruiter_Submit,
+.btn_recruiter_Back{
+    padding:8px 18px;
+    background: #275AE6;
+    color: #fff;
+    outline: none;
+    font-size: 16px;
+    font-weight: 660;
+    border-radius: 10px;
+    text-align: center;
+    border: 1.6px solid transparent;
+}
+
+.btn_recruiter_Back {
+    margin: 0 16px;
+    border: 1.6px solid #275AE6;
+    background: transparent;
+    color: #275AE6;
+}
+
+
+.btn_recruiter_Next:hover ,
+.btn_recruiter_Submit:hover,
+.btn_recruiter_Back:hover{
+    background: transparent;
+    color: #275AE6;
+    border: 1.6px solid #275AE6;
+    transition: all .3s ease;
+}
+
+
+.btn_recruiter_Back:hover {
+    background: #275AE6;
+    color: #fff;
+    transition: all .3s ease;
+}
+
+.recruiterMainInputDiv {
+    position: relative;
+    top: 18%;
+    width: 30rem;
+    border-radius: 8px;
+}
