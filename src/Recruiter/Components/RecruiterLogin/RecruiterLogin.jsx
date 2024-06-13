@@ -11,22 +11,23 @@ const RecruiterLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('')
-  const [attempts, setAttempts] = (0);
+  const [attempts, setAttempts] = useState(0);
 
   const maxAttempth = 4;
   const waitTimeMs = 120000;
 
   const {apiUrl} = Config;
 
-  const navigate = useNavigate();
-
+  
   useEffect(() => {
     const token = sessionStorage.getItem('recruiterToken');
-
+    
     if (token) {
       navigate('/UserDashboard');
-    }
-  },[]);
+      }
+      },[]);
+
+    const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();

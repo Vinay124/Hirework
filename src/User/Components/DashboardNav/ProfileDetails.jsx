@@ -15,7 +15,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { TbSettingsStar } from 'react-icons/tb';
 
 
-const ProfileDetails = ({ submenuData, UserData, getProfileImage }) => {
+const ProfileDetails = ({ getProfileImage }) => {
 
 
   const NavLinks = {
@@ -133,9 +133,9 @@ const ProfileDetails = ({ submenuData, UserData, getProfileImage }) => {
     <div className='profileDetails'>
       <div className='profileinnerDiv'>
         <div>
-            {UserData.data.map((userinfo) => {
+            {/* {UserData.data.map((userinfo) => {
               return(
-                <>
+                <> */}
                 <div className='profileDropdownDetails'>
                     <div className='profileDetailsWrapperDiv'>
                       <div className='userimage'>
@@ -190,9 +190,9 @@ const ProfileDetails = ({ submenuData, UserData, getProfileImage }) => {
                   </div>
 
                 </div>
-                </>
+                {/* </>
               )
-            })}
+            })} */}
         </div>
       </div>
     </div>

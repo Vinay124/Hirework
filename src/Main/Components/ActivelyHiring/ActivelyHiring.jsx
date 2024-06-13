@@ -157,6 +157,14 @@ const ActivelyHiring = () => {
                   slidesPerView: 4,
                   spaceBetween: 10,
                 },
+                1120: {
+                  slidesPerView: 3,
+                  spaceBetween: 10,
+                },
+                1200: {
+                  slidesPerView: 3,
+                  spaceBetween: 10,
+                },
               }}>
                 {filteredData.map((company, index) => (
                     <SwiperSlide>

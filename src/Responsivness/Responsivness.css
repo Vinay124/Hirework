@@ -233,7 +233,9 @@
     .navbar-Main {
         display: none ;
     }
-
+    .main_banner {
+        height: 160vh !important;
+    }
     .main_banner .main_banner_section > div h1 {
         width: 80%;
     }
@@ -336,8 +338,13 @@
 
 }
 
-@media only screen and (min-width: 1920px)  {
-  
+@media only screen and (min-width: 1920px) and (max-width: 1199px)  {
+    .formInputwrapper {
+        width: 80% !important;
+    }
+    .ActivelyHiringcard {
+        height: 75vh !important;
+    }
 }
 
 @media only screen and (min-width: 1200px)  {

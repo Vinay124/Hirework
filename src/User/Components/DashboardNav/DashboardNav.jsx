@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
-import { Link } from 'react-router-dom';
-import UserAvatar from '../../../assets/usersIcon/UserAvatar.jpg'
+import { Link, useNavigate } from 'react-router-dom';
 import DashboardSubMenus from './DashboardSubMenus';
 import ProfileDetails from './ProfileDetails';
 import './DashboardNav.moudle.css'
 import { IoIosSettings } from "react-icons/io";
-
+import JobSearchBar from '../../../Main/Components/RecentJobs/JobSearchBar';
+import { useDispatch, useSelector } from 'react-redux';
+import { setJobCategory, setPlace, setSearchResults } from '../../../Redux/actions';
+import { dummyJobs } from '../../../Main/Components/RecentJobs/JobJson';
 
 
 const DashboardNav = () => {
@@ -39,51 +41,6 @@ const DashboardNav = () => {
             ]
         }
     ];
-
-    // dummy data
-    const dummyJobtitle = [
-        "Software Engineer",
-        "Product Manager",
-        "Data Scientist",
-        "UX Designer",
-        "Marketing Specialist"
-    ];
-
-    const dummyCities = [
-        "San Francisco",
-        "New York",
-        "Los Angeles",
-        "Chicago",
-        "Boston"
-    ];
-    const dummyJobs = [
-        {
-            id:1,
-            title:"Software Engineer",
-            city:"San Francisco"
-        },
-        {
-            id:2,
-            title:"Product Manager",
-            city:"New York"
-        },
-        {
-            id:3,
-            title:"Data Scientist",
-            city:"Los Angeles"
-        },
-        {
-            id:4,
-            title:"UX Designer",
-            city:"Chicago"
-        },
-        {
-            id:5,
-            title:"Marketing Specialist",
-            city:"Boston"
-        }
-    ];
-
     // submenu
     const handleMouseEnter = (submenusId) => {
         setSubmenus(submenusId);
@@ -93,84 +50,12 @@ const DashboardNav = () => {
         setSubmenus(null)
     }
 
+     // Dropdown Menu 
+     const [openUserSetting, setOpenUserSetting] = useState();
 
-    // states
-    const [jobTitle, setjobTitle] = useState('');
-    const [city, setCity] = useState('');
-    const [jobs, setJobs] = useState([]);
-    const [jobTitleSuggestions, setJobTitlesuggestion] = useState([]);
-    const [citySuggestions, setCitySuggestions] = useState([]);
-    const [loading, setLoading] = useState(false);
-
-    const fetchJobTitleSuggestions = (title) => {
-        const suggestion = dummyJobtitle.filter( t => t.toLowerCase().includes(title.toLowerCase()));
-        setJobTitlesuggestion(suggestion);
-    };
-
-    const fetchCitySuggestions = (city) => {
-        const suggestions = dummyCities.filter(c => c.toLowerCase().includes(city.toLowerCase().include(city.toLowerCase())));
-        setCitySuggestions(suggestions);
-    }
-
-    const handleJobTitleChange = (e) => {
-        const title = e.target.value;
-        setjobTitle(title);
-
-        if (title) {
-            fetchJobTitleSuggestions(title);
-        } else {
-            setJobTitlesuggestion([]);
-        }
-    };
-
-
-    // handle city
-    const handleCityChange = (e) => {
-        const city = e.target.value;
-        setCity(city);
-
-        if (city) {
-            fetchCitySuggestions(city);
-        } else {
-            setCitySuggestions([]);
-        }
-    };
-
-    const handleSearch = () => {
-        setLoading(true);
-        const filteredJobs = dummyJobs.filter(
-            job => job.title.toLowerCase().includes(jobTitle.toLowerCase()) &&
-                job.city.toLowerCase().includes(city.toLowerCase())
-        );
-        setTimeout(() => {
-            setJobs(filteredJobs);
-            setLoading(false);
-        }, 500)
-    };
-
- 
-    // Dropdown 
-    const [openUserSetting, setOpenUserSetting] = useState();
-
-    const openPopup = () => { 
-        setOpenUserSetting(!openUserSetting);
-    }
-
-    const UserData = {
-        "data":[
-            {
-                "id":1,
-                "user_image":UserAvatar,
-                "userName":"Karthik K",
-                "role":"React Developer",
-                "profile_score":50,
-                "search_appearance":100,
-                "recruiter_actions":33,
-            }
-        ]
-    };
-
-    // Message Popup
+     const openPopup = () => { 
+         setOpenUserSetting(!openUserSetting);
+     }
 
     // Notification
     const [notification, setNotification] = useState();
@@ -178,6 +63,8 @@ const DashboardNav = () => {
     const openNotification = () => {
         setNotification(!notification)
     };
+
+
 
     // notification data
     const notificationData = {
@@ -271,6 +158,136 @@ const DashboardNav = () => {
 
     const getProfileImage = localStorage.getItem('profilePhoto');
 
+    // JobSearch functionality
+    const dispatch = useDispatch();
+    const jobCategory = useSelector((state) => state.jobCategory);
+    const place = useSelector((state) => state.place);
+    const searchResults = useSelector((state) => state.searchResults);
+    const [loading, setLoading] = React.useState(false);
+
+    const jobCategories = [
+        { 
+            value: 'Data Scientist',
+            label: 'Data Scientist'
+        },
+        { 
+            value: 'Software Engineer',
+            label: 'Software Engineer'
+        },
+        { 
+            value: 'React Developer',
+            label: 'React Developer'
+        },
+        { 
+            value: 'Backend Developer',
+            label: 'Backend Developer'
+        },
+        { 
+            value: 'Frontend Developer',
+            label: 'Frontend Developer' 
+        },
+        { 
+            value: 'Data Scientist',
+            label: 'Data Scientist'
+        },
+    ];
+
+    const places = [
+        { 
+            value: 'Bangalore', 
+            label:'Bangalore'
+        },
+        { 
+            value: 'Pune',
+            label:'Pune'
+        },
+        { 
+            value: 'Hyderabad',
+            label:'Hyderabad'
+        },
+        { 
+            value: 'Mumbai',
+            label:'Mumbai'
+        },
+        { 
+            value: 'Chennai',
+            label:'Chennai'
+        },
+        { 
+            value: 'Kollar',
+            label:'Kollar'
+        },
+        { 
+            value: 'indore',
+            label:'indore'
+        },
+        { 
+            value: 'Mangalore',
+            label:'Mangalore'
+        },
+        { 
+            value: 'Udupi',
+            label:'Udupi'
+        },
+        { 
+            value: 'Mysore',
+            label:'Mysore'
+        },
+    ];
+
+    useEffect(() => {
+        const handleVisibilityChange = () => {
+            if (document.visibilityState === 'hidden') {
+                sessionStorage.clear();
+            }
+        };
+
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+
+        const savedJobCategory = sessionStorage.getItem('jobCategory');
+        const savedPlace = sessionStorage.getItem('place');
+        const savedSearchResults = sessionStorage.getItem('searchResults');
+
+        if (savedJobCategory) dispatch(setJobCategory(savedJobCategory));
+        if (savedPlace) dispatch(setPlace(savedPlace));
+        if (savedSearchResults) dispatch(setSearchResults(JSON.parse(savedSearchResults)));
+
+        return () => {
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+        }
+
+    },[dispatch]);
+
+    const redirectNavigate = useNavigate();
+
+    const handleCategoryChange = (e) => {
+        dispatch(setJobCategory(e.target.value));
+      };
+    
+      const handlePlaceChange = (e) => {
+        dispatch(setPlace(e.target.value));
+      };
+
+    const handleSearch = () => {
+
+        if (!jobCategory || !place) {
+            alert('Please select both job category and place.');
+            return;
+        }
+
+        setLoading(true);
+        const results = dummyJobs.filter((job) =>
+        (jobCategory ? job.job_category === jobCategory : true) &&
+        (place ? job.job_location === place : true)
+        );
+        dispatch(setSearchResults(results));
+        sessionStorage.setItem('jobcategory', jobCategory);
+        sessionStorage.setItem('place', place);
+        sessionStorage.setItem('searchResults', JSON.stringify(results));
+        setLoading(false);
+        redirectNavigate('/UserDashboard/JobSearchResult');
+    };
+    
 
   return (
     <>
@@ -302,49 +319,17 @@ const DashboardNav = () => {
             </ul>
         </div>
 
-        {/* Search input */}
-        <div className='jobSearchInput'>
-           <div>
-            <input type="text" value={jobTitle} 
-            onChange={handleJobTitleChange}
-            placeholder='Job Title'
-            list='job-title-suggestions'/>
-            <datalist id='job-title-suggestions'>
-                {jobTitleSuggestions.map((suggestion, index) => (
-                    <option key={index} value={suggestion}/>
-                ))}
-            </datalist>
-           </div>
-
-           <div>
-            <input type="text" value={city}
-            onChange={handleCityChange} placeholder='Enter City' list="city-suggestions"
-            />
-            <datalist id="city-suggestions">
-                {citySuggestions.map((suggestion,index) => (
-                    <option key={index} value={suggestion}/>
-                ))}
-            </datalist>
-           </div>
-
-           <button onClick={handleSearch} className='search-btn' disabled={loading}>{loading ? 'Searching...' : 'Search'}</button>
-        </div>
-
-        {/* <div>
-            {jobs.length > 0 ? (
-                <ul>
-                    {jobs.map((job) => (
-                        <li key={job.id}>{job.title} - {job.city}</li>
-                    ))}
-                </ul>
-            ) : (
-                <span></span>
-            )}
-             {/* : ( */}
-                 {/* // <p>No jobs found</p> */}
-             {/* )} *
-        
-        </div> */}
+        {/* JobSarchBar */}
+        <JobSearchBar
+            jobCategory={jobCategory}
+            place={place}
+            handleCategoryChange={handleCategoryChange}
+            handlePlaceChange={handlePlaceChange}
+            jobCategories={jobCategories}
+            places={places}
+            handleSearch={handleSearch}
+            loading={loading}
+        />
 
         {/* notifications and account details */}
         <div className='alertSectionDiv'>
@@ -370,7 +355,7 @@ const DashboardNav = () => {
         </div>
         {/* user info */}
         {openUserSetting && (
-            <ProfileDetails getProfileImage={getProfileImage} UserData={UserData} close={openPopup} openUserSetting={openUserSetting}/>
+            <ProfileDetails getProfileImage={getProfileImage} close={openPopup} openUserSetting={openUserSetting}/>
         )}
 
         {/* Notification */}

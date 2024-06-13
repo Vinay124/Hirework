@@ -10,6 +10,20 @@
 .jobSearchInput {
     display: flex;
 }
+.jobSearchInput .Job_CategoryInp,
+.Job_placeOp{
+
+    padding: 8px 16px;
+    border: 1px solid #e5e5e5;
+    outline: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    width: auto;
+}
+
+
+
+
 
 .alertSectionDiv {
     display: flex;
@@ -52,13 +66,7 @@
     font-size: 10px;
 }
 
-.jobSearchInput > div input{
-    padding: 8px 16px;
-    border: 1px solid #e5e5e5;
-    outline: none;
-    border-radius: 5px;
-    margin: 0 13px;
-}
+
 
 .search-btn {
     padding: 8px 30px;

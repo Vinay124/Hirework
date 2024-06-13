@@ -1,5 +1,5 @@
 .jobdetailSection {
-    background: #fefefe;
+    background: #f8f9fa;
     padding: 1rem;
 }
 
@@ -9,6 +9,7 @@
     padding: 3rem;
     border-radius: 10px;
     margin-top: 1.5rem;
+    background: #fff;
 }
 .backgroundImage {
     background: #FC354C; 
@@ -22,6 +23,7 @@
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     z-index: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 
@@ -96,6 +98,7 @@
     padding: 1.5rem;
     border-radius: 10px;
     /* margin:1.5rem 2px; */
+    background: #fff;
 }
 
 .about_company  h5 ,
@@ -156,6 +159,7 @@
 .salarySectionCol {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     padding: 2rem;
+    background: #fff;
     border-radius: 10px;
 }
 
@@ -209,6 +213,7 @@
     padding: 2rem;
     border-radius: 10px;
     margin-top: 3rem;
+    background: #fff;
 }
 
 
@@ -241,9 +246,11 @@
 .referalJobs::-webkit-scrollbar {
     width: 5px;
     border-radius: 3px;
+    border-radius: 10px;
 }
 .referalJobs::-webkit-scrollbar-track {
     background: #f1f1f1;
+    margin-top: 1rem;
 }
 .referalJobs::-webkit-scrollbar-thumb {
     background: #c9c9c9;

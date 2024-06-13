@@ -17,6 +17,7 @@ import JobDetail from './User/Pages/JobDetail/JobDetail'
 import UserProfileDetails from './User/Components/UserProfileDetails/UserProfileDetails'
 import Test from './Test'
 import RecruiterRegister from './Recruiter/Components/RecruiterLogin/RecruiterSignup/RecruiterRegister'
+import JobSearchResults from './Main/Components/RecentJobs/JobSearchResults'
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
 
         {/* UserDashboard  */}
         <Route path='/UserDashboard' element={<UserDashboard/>}/>
+        <Route path='/UserDashboard/JobSearchResult' element={<JobSearchResults/>}/>
 
         {/* ViewJobs */}
         <Route path='/UserDashboard/RecentJobs' element={<RecentJobs/>}/>

@@ -2540,204 +2540,383 @@
 
 
 
-import React, { useState, useEffect } from 'react';
-import { Form, Button } from 'react-bootstrap';
+// import React, { useState, useEffect } from 'react';
+// import { Form, Button } from 'react-bootstrap';
+// import Select from 'react-select';
+// import axios from 'axios';
+
+// const Test = () => {
+//   const [step, setStep] = useState(1);
+//   const [formData, setFormData] = useState({
+//     companyType: '',
+//     fullName: '',
+//     location: '',
+//     phone: '',
+//     workEmail: '',
+//     organization: '',
+//     designation: '',
+//     password: '',
+//     confirmPassword: '',
+//   });
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData({
+//       ...formData,
+//       [name]: value,
+//     });
+//   };
+
+//   const handleLocationChange = (selectedOption) => {
+//     setFormData({
+//       ...formData,
+//       location: selectedOption ? selectedOption.value : '',
+//     });
+//   };
+
+//   const nextStep = () => setStep(step + 1);
+//   const prevStep = () => setStep(step - 1);
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     // Add form validation and final submission logic here
+//     console.log('Form submitted:', formData);
+//   };
+
+//   return (
+//     <>
+//     <Form onSubmit={handleSubmit}>
+//       {step === 1 && (
+//         <Step1 formData={formData} handleChange={handleChange} />
+//       )}
+//       {step === 2 && (
+//         <Step2
+//           formData={formData}
+//           handleChange={handleChange}
+//           handleLocationChange={handleLocationChange}
+//         />
+//       )}
+//       {step === 3 && (
+//         <Step3 formData={formData} handleChange={handleChange} />
+//       )}
+//       <div className="mt-3">
+//         {step > 1 && <Button onClick={prevStep}>Back</Button>}
+//         {step < 3 && <Button onClick={nextStep}>Next</Button>}
+//         {step === 3 && <Button type="submit">Submit</Button>}
+//       </div>
+//     </Form>
+//     </>
+//   );
+// };
+
+// const Step1 = ({ formData, handleChange }) => (
+//   <div>
+//     <Form.Group>
+//       <Form.Label>Choose your Company Type</Form.Label>
+//       <Form.Control
+//         type="text"
+//         name="companyType"
+//         value={formData.companyType}
+//         onChange={handleChange}
+//       />
+//     </Form.Group>
+//     <Form.Group>
+//       <Form.Label>Write your full name</Form.Label>
+//       <Form.Control
+//         type="text"
+//         name="fullName"
+//         value={formData.fullName}
+//         onChange={handleChange}
+//       />
+//     </Form.Group>
+//   </div>
+// );
+
+// const Step2 = ({ formData, handleChange, handleLocationChange }) => {
+//   const [locationOptions, setLocationOptions] = useState([]);
+//   const [isLoading, setIsLoading] = useState(false);
+
+//   useEffect(() => {
+//     fetchLocations('');
+//   }, []);
+
+//   const fetchLocations = async (query) => {
+//     setIsLoading(true);
+//     try {
+//       const response = await axios.get(`https://api.example.com/locations?query=${query}`);
+//       const options = response.data.map((location) => ({
+//         value: location.name,
+//         label: location.name,
+//       }));
+//       setLocationOptions(options);
+//     } catch (error) {
+//       console.error('Error fetching locations:', error);
+//     }
+//     setIsLoading(false);
+//   };
+
+//   const handleInputChange = (inputValue) => {
+//     fetchLocations(inputValue);
+//   };
+
+//   return (
+//     <div>
+//       <Form.Group>
+//         <Form.Label>Select Location</Form.Label>
+//         <Select
+//           options={locationOptions}
+//           onChange={handleLocationChange}
+//           onInputChange={handleInputChange}
+//           isLoading={isLoading}
+//           value={locationOptions.find(
+//             (option) => option.value === formData.location
+//           )}
+//         />
+//       </Form.Group>
+//       <Form.Group>
+//         <Form.Label>Phone</Form.Label>
+//         <Form.Control
+//           type="text"
+//           name="phone"
+//           value={formData.phone}
+//           onChange={handleChange}
+//         />
+//       </Form.Group>
+//       <Form.Group>
+//         <Form.Label>Work email id</Form.Label>
+//         <Form.Control
+//           type="email"
+//           name="workEmail"
+//           value={formData.workEmail}
+//           onChange={handleChange}
+//         />
+//       </Form.Group>
+//     </div>
+//   );
+// };
+
+// const Step3 = ({ formData, handleChange }) => (
+//   <div>
+//     <Form.Group>
+//       <Form.Label>Organization</Form.Label>
+//       <Form.Control
+//         as="select"
+//         name="organization"
+//         value={formData.organization}
+//         onChange={handleChange}
+//       >
+//         <option value="">Select from dropdown</option>
+//         <option value="Org1">Organization 1</option>
+//         <option value="Org2">Organization 2</option>
+//       </Form.Control>
+//     </Form.Group>
+//     <Form.Group>
+//       <Form.Label>Designation</Form.Label>
+//       <Form.Control
+//         type="text"
+//         name="designation"
+//         value={formData.designation}
+//         onChange={handleChange}
+//       />
+//     </Form.Group>
+//     <Form.Group>
+//       <Form.Label>Password</Form.Label>
+//       <Form.Control
+//         type="password"
+//         name="password"
+//         value={formData.password}
+//         onChange={handleChange}
+//       />
+//     </Form.Group>
+//     <Form.Group>
+//       <Form.Label>Confirm Password</Form.Label>
+//       <Form.Control
+//         type="password"
+//         name="confirmPassword"
+//         value={formData.confirmPassword}
+//         onChange={handleChange}
+//       />
+//     </Form.Group>
+//   </div>
+// );
+
+// export default Test;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React, { useState } from 'react';
 import Select from 'react-select';
-import axios from 'axios';
+
+const dummyJobs = [
+  {
+    id: 1,
+    company_logo: 'https://demoapus1.com/jobtex-new/wp-content/uploads/2023/05/e1.png',
+    job_title: 'Data Scientist',
+    company_name: 'Wipro',
+    experience: '1 - 2 years',
+    salary: '10 - 12 LPA',
+    job_location: 'Bangalore',
+    roles_responsibility: [
+      'Skills Required: Roles and Responsibilities. Java Developers',
+      'Software Engineer. We are looking for a Java Developer with experience in building high-performing',
+      'scalable, applicationsExperience: 2-4+ years',
+    ],
+    skills_required: ['Python', 'Ruby', 'Machine Learning', 'Statistics', 'AI', 'ML'],
+    posted: 'Posted 60 days ago',
+    job_category: 'Data Scientist',
+    job_type: 'PREMIUM',
+    people_applyed: 50,
+  },
+  // Add more dummy jobs as needed
+];
 
 const Test = () => {
-  const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({
-    companyType: '',
-    fullName: '',
-    location: '',
-    phone: '',
-    workEmail: '',
-    organization: '',
-    designation: '',
-    password: '',
-    confirmPassword: '',
-  });
+  const [jobCategory, setJobCategory] = useState('');
+  const [place, setPlace] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+  const jobCategories = [
+    { value: 'Data Scientist', label: 'Data Scientist' },
+    { value: 'Software Engineer', label: 'Software Engineer' },
+    // Add more categories as needed
+  ];
+
+  const places = [
+    { value: 'Bangalore', label: 'Bangalore' },
+    { value: 'Mumbai', label: 'Mumbai' },
+    // Add more places as needed
+  ];
+
+  const handleCategoryChange = (selectedOption) => {
+    setJobCategory(selectedOption ? selectedOption.value : '');
   };
 
-  const handleLocationChange = (selectedOption) => {
-    setFormData({
-      ...formData,
-      location: selectedOption ? selectedOption.value : '',
-    });
+  const handlePlaceChange = (selectedOption) => {
+    setPlace(selectedOption ? selectedOption.value : '');
   };
 
-  const nextStep = () => setStep(step + 1);
-  const prevStep = () => setStep(step - 1);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add form validation and final submission logic here
-    console.log('Form submitted:', formData);
-  };
-
-  return (
-    <>
-    <Form onSubmit={handleSubmit}>
-      {step === 1 && (
-        <Step1 formData={formData} handleChange={handleChange} />
-      )}
-      {step === 2 && (
-        <Step2
-          formData={formData}
-          handleChange={handleChange}
-          handleLocationChange={handleLocationChange}
-        />
-      )}
-      {step === 3 && (
-        <Step3 formData={formData} handleChange={handleChange} />
-      )}
-      <div className="mt-3">
-        {step > 1 && <Button onClick={prevStep}>Back</Button>}
-        {step < 3 && <Button onClick={nextStep}>Next</Button>}
-        {step === 3 && <Button type="submit">Submit</Button>}
-      </div>
-    </Form>
-    </>
-  );
-};
-
-const Step1 = ({ formData, handleChange }) => (
-  <div>
-    <Form.Group>
-      <Form.Label>Choose your Company Type</Form.Label>
-      <Form.Control
-        type="text"
-        name="companyType"
-        value={formData.companyType}
-        onChange={handleChange}
-      />
-    </Form.Group>
-    <Form.Group>
-      <Form.Label>Write your full name</Form.Label>
-      <Form.Control
-        type="text"
-        name="fullName"
-        value={formData.fullName}
-        onChange={handleChange}
-      />
-    </Form.Group>
-  </div>
-);
-
-const Step2 = ({ formData, handleChange, handleLocationChange }) => {
-  const [locationOptions, setLocationOptions] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    fetchLocations('');
-  }, []);
-
-  const fetchLocations = async (query) => {
-    setIsLoading(true);
-    try {
-      const response = await axios.get(`https://api.example.com/locations?query=${query}`);
-      const options = response.data.map((location) => ({
-        value: location.name,
-        label: location.name,
-      }));
-      setLocationOptions(options);
-    } catch (error) {
-      console.error('Error fetching locations:', error);
-    }
-    setIsLoading(false);
-  };
-
-  const handleInputChange = (inputValue) => {
-    fetchLocations(inputValue);
+  const handleSearch = () => {
+    setLoading(true);
+    const results = dummyJobs.filter((job) =>
+      (jobCategory ? job.job_category === jobCategory : true) &&
+      (place ? job.job_location === place : true)
+    );
+    setSearchResults(results);
+    setLoading(false);
   };
 
   return (
     <div>
-      <Form.Group>
-        <Form.Label>Select Location</Form.Label>
-        <Select
-          options={locationOptions}
-          onChange={handleLocationChange}
-          onInputChange={handleInputChange}
-          isLoading={isLoading}
-          value={locationOptions.find(
-            (option) => option.value === formData.location
-          )}
-        />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>Phone</Form.Label>
-        <Form.Control
-          type="text"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-        />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>Work email id</Form.Label>
-        <Form.Control
-          type="email"
-          name="workEmail"
-          value={formData.workEmail}
-          onChange={handleChange}
-        />
-      </Form.Group>
+      <SearchBar
+        jobCategory={jobCategory}
+        place={place}
+        handleCategoryChange={handleCategoryChange}
+        handlePlaceChange={handlePlaceChange}
+        jobCategories={jobCategories}
+        places={places}
+      />
+      <button onClick={handleSearch} disabled={loading}>
+        Search
+      </button>
+      <SearchResults results={searchResults} />
     </div>
   );
 };
 
-const Step3 = ({ formData, handleChange }) => (
-  <div>
-    <Form.Group>
-      <Form.Label>Organization</Form.Label>
-      <Form.Control
-        as="select"
-        name="organization"
-        value={formData.organization}
-        onChange={handleChange}
-      >
-        <option value="">Select from dropdown</option>
-        <option value="Org1">Organization 1</option>
-        <option value="Org2">Organization 2</option>
-      </Form.Control>
-    </Form.Group>
-    <Form.Group>
-      <Form.Label>Designation</Form.Label>
-      <Form.Control
-        type="text"
-        name="designation"
-        value={formData.designation}
-        onChange={handleChange}
+const SearchBar = ({
+  jobCategory,
+  place,
+  handleCategoryChange,
+  handlePlaceChange,
+  jobCategories,
+  places,
+}) => {
+  return (
+    <div>
+      <Select
+        placeholder="Job Category"
+        onChange={handleCategoryChange}
+        options={jobCategories}
+        value={jobCategories.find((option) => option.value === jobCategory)}
       />
-    </Form.Group>
-    <Form.Group>
-      <Form.Label>Password</Form.Label>
-      <Form.Control
-        type="password"
-        name="password"
-        value={formData.password}
-        onChange={handleChange}
+      <Select
+        placeholder="Place"
+        onChange={handlePlaceChange}
+        options={places}
+        value={places.find((option) => option.value === place)}
       />
-    </Form.Group>
-    <Form.Group>
-      <Form.Label>Confirm Password</Form.Label>
-      <Form.Control
-        type="password"
-        name="confirmPassword"
-        value={formData.confirmPassword}
-        onChange={handleChange}
-      />
-    </Form.Group>
-  </div>
-);
+    </div>
+  );
+};
+
+const SearchResults = ({ results }) => {
+  return (
+    <div>
+      {results.length === 0 && <p>No results found</p>}
+      {results.map((job) => (
+        <div key={job.id} className="job-card">
+          <img src={job.company_logo} alt={`${job.company_name} logo`} />
+          <h3>{job.job_title}</h3>
+          <p>{job.company_name}</p>
+          <p>{job.experience}</p>
+          <p>{job.salary}</p>
+          <p>{job.job_location}</p>
+          <p>{job.posted}</p>
+          <p>{job.job_category}</p>
+          <p>{job.job_type}</p>
+          <p>People applied: {job.people_applyed}</p>
+          <div>
+            <h4>Roles and Responsibilities</h4>
+            <ul>
+              {job.roles_responsibility.map((role, index) => (
+                <li key={index}>{role}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4>Skills Required</h4>
+            <ul>
+              {job.skills_required.map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export default Test;
