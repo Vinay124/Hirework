@@ -62,8 +62,8 @@ const BasicDetails = ({ formData, setFormData, nextStep}) => {
                   <form> 
                     <div className='inputBoxWrapper'>
                       <input type='text'  
-                      name="first_name"
-                      value={formData.first_name} onChange={handleChange}
+                      name="name"
+                      value={formData.name} onChange={handleChange}
                       />
                       <label>FirstName</label>
                     </div>

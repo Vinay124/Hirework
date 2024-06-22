@@ -3,6 +3,7 @@ import './TopCompaniesHiring.moudle.css'
 import { Col, Container, Row } from 'react-bootstrap'
 import { IoIosArrowForward } from 'react-icons/io'
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import 'swiper/swiper-bundle.css';
 
 const TopCompaniesHiring = () => {
@@ -21,7 +22,7 @@ const TopCompaniesHiring = () => {
         ]
       },
       {
-        "id":1,
+        "id":2,
         "companyName":"Product Based ",
         "hiringActivity":"958 are activity hiring",
         "companyImages":[
@@ -32,7 +33,7 @@ const TopCompaniesHiring = () => {
         ]
       },
       {
-        "id":1,
+        "id":3,
         "companyName":"Banking & finance",
         "hiringActivity":"584 are activity hiring",
         "companyImages":[
@@ -43,7 +44,7 @@ const TopCompaniesHiring = () => {
         ]
       },
       {
-        "id":1,
+        "id":4,
         "companyName":"Hospitality",
         "hiringActivity":"99 are activity hiring",
         "companyImages":[
@@ -54,7 +55,7 @@ const TopCompaniesHiring = () => {
         ]
       },
       {
-        "id":1,
+        "id":5,
         "companyName":"StartUps",
         "hiringActivity":"8457 are activity hiring",
         "companyImages":[
@@ -65,7 +66,7 @@ const TopCompaniesHiring = () => {
         ]
       },
       {
-        "id":1,
+        "id":6,
         "companyName":"Ed Tech",
         "hiringActivity":"25785 are activity hiring",
         "companyImages":[
@@ -91,15 +92,21 @@ const TopCompaniesHiring = () => {
                             <h1>Top companies hiring now</h1>
                             <p>Showing companies based on reviews and recent job openings</p>
                         </div>
-                        <div className='categories'>
+                        {/* <div className='categories'>
                             <h5>All Categories <IoIosArrowForward/></h5>
-                        </div>
+                        </div> */}
                     </div>
                 </Col>
             </Row>
 
             <Row>
-            <Swiper spaceBetween={10} slidesPerView={4} 
+            <Swiper spaceBetween={10} navigation={true} 
+            slidesPerView={4} loop={true}
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 3000, 
+              disableOnInteraction: false,
+            }}
             breakpoints={{
               320: {
                 slidesPerView: 1,
@@ -121,30 +128,28 @@ const TopCompaniesHiring = () => {
                 slidesPerView: 3,
                 spaceBetween: 10,
               },
-            }}  >
+            }}>
               {companyHiringJson.data.map((companyHiring) => {
                 return(
-                  <SwiperSlide>
-                  <div  key={companyHiring.id}>
-                    <div className='companyHiringCardWrapper'>
-                      <div className='companyImages'>
-                        {companyHiring.companyImages.map((imageUrl, index) => (
-                          <img key={index} src={imageUrl} alt={`Company Image ${index}`}/>
-                        ))}
-                      </div>
-                      
-                      {/* company name */}
-                      <div className='companyName'>
-                        <h5>{companyHiring.companyName}</h5>
-                        <span>{companyHiring.hiringActivity}</span>
-                      </div>
+                  <SwiperSlide key={companyHiring.id}>
+                      <div className='companyHiringCardWrapper'>
+                          <div className='companyImages'>
+                            {companyHiring.companyImages.map((imageUrl, index) => (
+                              <img key={index} src={imageUrl} alt={`Company Image ${index}`}/>
+                            ))}
+                          </div>
+                          
+                          {/* company name */}
+                          <div className='companyName'>
+                            <h5>{companyHiring.companyName}</h5>
+                            <span>{companyHiring.hiringActivity}</span>
+                          </div>
 
-                      {/* button */}
-                      <div>
-                        <button className='btn-apply'>Apply</button>
-                      </div>
-                    </div>
-                </div>
+                          {/* button */}
+                          <div>
+                            <button className='btn-apply'>Apply</button>
+                          </div>
+                        </div>
                   </SwiperSlide>
                 )})}
             </Swiper>

@@ -21,7 +21,27 @@
     width: auto;
 }
 
+.notFoundBannerDiv {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
 
+.notFoundBannerDiv {
+    margin-top: 1.5rem;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.2rem;
+    background: #ffffff;
+    margin-top: 1rem;
+    border-radius: 16px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.notFoundBannerDiv > div img {
+    width: 40%;
+}
 
 
 

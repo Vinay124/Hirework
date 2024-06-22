@@ -1,6 +1,6 @@
 // env.js
 const Config = {
-    apiUrl: "http://13.234.33.63/hirework/web/"
+    apiUrl: "https://hirework.co.in/hirework/web/"
   };
   
 export default Config;

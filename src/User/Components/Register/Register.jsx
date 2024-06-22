@@ -21,7 +21,7 @@ const Register = () => {
 
         try {
 
-            const response = await axios.post(`${apiUrl}user/signup`,userData);
+            const response = await axios.post(`${apiUrl}signup/`,userData);
     
             localStorage.setItem('user', JSON.stringify(response.data));
             sessionStorage.getItem('token', response.data.token)
@@ -43,14 +43,11 @@ const Register = () => {
     // real Data
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({
-        company:0,
+        company:'False',
         email:'',
-        first_name: '',
-        last_name: '',
+        name: '',
         mobile:'',
         password: '',
-        // confirmPassword: '',
-        // otpPassword:''
     });
 
     const nextStep = () => {
@@ -64,14 +61,20 @@ const Register = () => {
     const submitForm = async (e) => {
         e.preventDefault();
         try {
-            // const userData = {...formData};
-            // const response = await createUser(userData);
-            const response = await createUser(formData)
-            console.log('User Created:', response.data.messsage);
+            const { last_name, ...userDataWithoutLastName } = formData;
+            const fullName = `${formData.name} ${formData.last_name}`;
+            const truncatedName = fullName.replace(); // Truncate last name to the first letter followed by a dot
+            const userData = {
+                ...userDataWithoutLastName,
+                name: truncatedName
+            };
+            const response = await createUser(userData);
+            console.log('User Created:', response.data.message);
         } catch (error) {
             console.log('Error creating User:', error);
         }
     };
+    
 
     switch (step) {
         case 1:

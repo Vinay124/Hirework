@@ -7,6 +7,7 @@ import { FaRegBookmark, FaRegEyeSlash } from 'react-icons/fa';
 import JobFilter from '../JobFilter/JobFilter';
 import { Col, Container, Row } from 'react-bootstrap';
 import { BiSolidMap } from 'react-icons/bi';
+import NotFound from '../../../assets/Banner/notFound.png'
 
 const JobSearchResults = () => {
 
@@ -31,7 +32,22 @@ const JobSearchResults = () => {
                         <h2>Search Jobs</h2>
                     </div>
                 <Col className='col-lg-8  JobSearchdataDiv'>
-                {searchResults.length === 0 && <p> no Results found</p>}
+                {searchResults.length === 0 && 
+                <>
+                <section>
+                    <Container>
+                        <div className='notFoundBannerDiv'>
+                            <div className='notFoundImage'>
+                                <img src={NotFound} alt='NotFound'/>
+                            </div>
+                            <div>
+                                <h5>No Result Found...!</h5>
+                            </div>
+                        </div>
+                    </Container>
+                </section>
+                
+                </>}
                     {searchResults.map((job) => (
                                 <Link key={job.id}>
                                     <div className='jobdetailsCardWrapper '>

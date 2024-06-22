@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import ForgotPassword from '../ForgotPassword/ForgotPassword'
 import axios from 'axios'
 import Config from '../../../../config'
+import Cookies from 'js-cookie'
 
 
 const JobSeekerLogin = () => {
@@ -14,6 +15,11 @@ const JobSeekerLogin = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [attempts, setAttempts] = useState(0);
+
+
+  // document.cookie = "theme=dark; path=/";
+
+
 
   const maxAttempth = 4;
   const waitTimeMs = 120000;
@@ -40,13 +46,32 @@ const JobSeekerLogin = () => {
     }
 
     try {
-      const responseData = await axios.post(`${apiUrl}user/login`,{ email, password,});
-      if (responseData.status === 200) {
-        const UserToken = responseData.data.data.token;
-        navigate('/UserDashboard');
-        sessionStorage.setItem('token', UserToken);
-      } else  {
-        console.log('login Failed')
+      const responseData = await axios.post(`${apiUrl}login/`,{
+           email,
+          password
+        },{headers : {"X-CSRFToken" : Cookies.get("csrftoken")}});
+
+        console.log(responseData);
+
+        // testing setting Session token
+        let token = 'dcfgvbhnjbhgvtgyhbgfctgybvcfrftgvfcrtfgv'
+        Cookies.set('token' , token)
+
+      //  const setCookieHeader = response.headers['set-cookie'];
+      //  console.log("cookie", setCookieHeader);
+
+
+      // Cookies.save('x-access-token', data['x-access-token']);
+
+    
+
+      if (responseData.data.code == 202) {
+          // const UserToken = responseData.data.code;
+          navigate('/UserDashboard');
+          // sessionStorage.setItem('token', UserToken);
+          console.log('Loggedin');
+        } else {
+          console.log('login Failed')
       }
 
     } catch (error) {
@@ -57,6 +82,7 @@ const JobSeekerLogin = () => {
       }, waitTimeMs);
     }
   };
+
 
 
   return (

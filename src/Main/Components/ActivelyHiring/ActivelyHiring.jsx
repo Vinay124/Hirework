@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap'
 import './ActivelyHiring.moudle.css'
 import starIcon from '../../../assets/icons/star.svg'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
+import axios from 'axios';
+import Config from '../../../../config'
+import { Link } from 'react-router-dom';
 
 const ActivelyHiring = () => {
 
@@ -103,9 +106,59 @@ const ActivelyHiring = () => {
         ]
     };
 
-    const [selectedService, setSelectedService] = useState('All');
 
-    const filteredData = selectedService === 'All' ? companyDetailJson.data : companyDetailJson.data.filter(data => data.company_services.includes(selectedService));
+    const [companies, setCompanies] = useState([]);
+    const [selectedService, setSelectedService] = useState('All');
+    const [error, setError] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
+
+    useEffect(() => {
+        fetchCompanies();
+    }, []);
+
+    const { apiUrl } = Config;
+
+    const fetchCompanies = async () => {
+        setIsLoading(true);
+        try {
+            const response = await axios.get(`${apiUrl}jobs/`);
+            setCompanies(response.data.data); 
+            console.log(response.data.data)
+        } catch (error) {
+            setError(error.message);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const handleServiceFilter = (service) => {
+        setSelectedService(service);
+    };
+
+    const getUniqueServices = () => {
+        const uniqueServices = new Set();
+        companies.forEach(company => {
+            company.company_services?.forEach(service => { // Optional chaining
+                uniqueServices.add(service);
+            });
+        });
+        return Array.from(uniqueServices);
+    };
+    
+
+    const filteredData = selectedService === 'All' ? companies : companies.filter(data => data.company_services.includes(selectedService));
+
+    if (isLoading) {
+        return <p>Loading...</p>;
+    }
+
+    if (error) {
+    return <p>Error: {error}</p>;
+    }
+
+
+    
+
 
   return (
     <section className='ActivelyHiring'>
@@ -122,7 +175,7 @@ const ActivelyHiring = () => {
             {/* Tabs */}
             <div className='dropdownButtonWrappers'>
                 <button className={selectedService === 'All' ? 'dropdownBtns active' :"dropdownBtns"} onClick={() => setSelectedService('All')}>All</button>
-                <button className={selectedService === 'Consumer, Retail & Hospitality' ? 'dropdownBtns active' :"dropdownBtns"}  onClick={() => setSelectedService('Consumer, Retail & Hospitality')}>Consumer, Retail & Hospitality</button>
+                {/* <button className={selectedService === 'Consumer, Retail & Hospitality' ? 'dropdownBtns active' :"dropdownBtns"}  onClick={() => setSelectedService('Consumer, Retail & Hospitality')}>Consumer, Retail & Hospitality</button>
                 <button className={selectedService === 'B2B' ? 'dropdownBtns active' :"dropdownBtns"} onClick={() => setSelectedService('B2B')}>B2B</button>
                 <button className={selectedService === 'IT Services' ? 'dropdownBtns active' :"dropdownBtns"} onClick={() => setSelectedService('IT Services')}>IT Services</button>
                 <button className={selectedService === 'Technology' ? 'dropdownBtns active' :"dropdownBtns"} onClick={() => setSelectedService('Technology')}>Technology</button>
@@ -131,7 +184,16 @@ const ActivelyHiring = () => {
                 <button className={selectedService === 'Professional Services' ? 'dropdownBtns active' :"dropdownBtns"} onClick={() => setSelectedService('Professional Services')}>Professional Services</button>
                 <button className={selectedService === 'BFSI' ? 'dropdownBtns active' :"dropdownBtns"} onClick={() => setSelectedService('BFSI')}>BFSI</button>
                 <button className={selectedService === 'Healthcare & Life Sciences' ? 'dropdownBtns active' :"dropdownBtns"} onClick={() => setSelectedService('Healthcare & Life Sciences')}>HealthCare</button>
-                <button className={selectedService === 'BPM' ? 'dropdownBtns active' :"dropdownBtns"} onClick={() => setSelectedService('BPM')}>BPM</button>
+                <button className={selectedService === 'BPM' ? 'dropdownBtns active' :"dropdownBtns"} onClick={() => setSelectedService('BPM')}>BPM</button> */}
+                {getUniqueServices().map((service, index) => (
+                        <button
+                            key={index}
+                            className={selectedService === service ? 'dropdownBtns active' : 'dropdownBtns'}
+                            onClick={() => handleServiceFilter(service)}
+                        >
+                            {service}
+                        </button>
+                    ))}
             </div>
 
             <Row>
@@ -166,44 +228,47 @@ const ActivelyHiring = () => {
                   spaceBetween: 10,
                 },
               }}>
-                {filteredData.map((company, index) => (
-                    <SwiperSlide>
-                    <div key={index}>
-                        <div className='ActivelyHiringcard'>
-                            {/*logo  Company name , review */}
-                            <div className='companyLogoWrapper'>
-                                <img src={company.company_image} className='companyLogo'/>
-                            </div>
-                            <div className='companyReviewRating'>
-                                <div>
-                                    <h5>{company.company_Name}</h5>
+                {/* {filteredData.map((company, index) => ( */}
+                {filteredData.map(company => (
+                    <SwiperSlide key={company.id}>
+                    <div className='activlyHiringMapMainDiv'>
+                        <Link to={`/activelyHiringCompany/${company.id}`}>
+                            <div className='ActivelyHiringcard'>
+                                {/*logo  Company name , review */}
+                                <div className='companyLogoWrapper'>
+                                    <img src={`https://hirework.co.in/hirework/uploads/${company.company.logo}`} className='companyLogo'/>
                                 </div>
-                                <div className='starRatingWrapper'>
+                                <div className='companyReviewRating'>
                                     <div>
-                                        <img src={starIcon} className='staricon'/>
+                                        <h6>{company.name}</h6>
                                     </div>
-                                    <div>
-                                        <span className='mx-2'>{company.company_rating}</span>
-                                        |
-                                        <span className='mx-2'>{company.company_review}+ reviews</span>
+                                    <div className='starRatingWrapper'>
+                                        <div>
+                                            <img src={starIcon} className='staricon'/>
+                                        </div>
+                                        <div>
+                                            <span className='mx-2'>{company.company_rating}</span>
+                                            |
+                                            <span className='mx-2'>{company.company_review}+ reviews</span>
+                                        </div>
                                     </div>
                                 </div>
+                                {/* company desc */}
+                                <div className='companyDescription'>
+                                    <p>{company.description}</p>
+                                </div>
+                                {/* company services  button */}
+                                <div className='companyServicesTag'>
+                                    {company.job_tags?.filter(item => item[1]).map((item, i) => (
+                                        <span className='CompanyTags' key={i}>{item[1]}</span>
+                                    ))}
+                                </div>
+                                
+                                <div className='viewJobsDiv'>
+                                    <button className='btn-viewJobs'>View Jobs</button>
+                                </div>
                             </div>
-                            {/* company desc */}
-                            <div className='companyDescription'>
-                                <p>{company.company_description}</p>
-                            </div>
-                            {/* company services  button */}
-                            <div className='companyServicesTag'>
-                                {company.company_services.map((item, i) => (
-                                    <span className='CompanyTags' key={i}>{item}</span>
-                                ))}
-                            </div>
-                            
-                            <div className='viewJobsDiv'>
-                                <button className='btn-viewJobs'>View Jobs</button>
-                            </div>
-                        </div>
+                        </Link>
                     </div>
                     </SwiperSlide>
                 ))}
@@ -218,4 +283,6 @@ const ActivelyHiring = () => {
   )
 }
 
+
 export default ActivelyHiring
+

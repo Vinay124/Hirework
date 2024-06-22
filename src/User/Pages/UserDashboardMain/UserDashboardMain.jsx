@@ -10,11 +10,14 @@ import SponsorHiring from '../../../Main/Components/SponsorHiring/SponsorHiring'
 
 
 const UserDashboardMain = () => {
+
+    
+
   return (
     <>
     <section className='userDashboardDetails'>
         <Container>
-            <Row className=''>
+            <Row >
                 <Col className='col-lg-3'>
                     <AccountInfo/>
                 </Col>

@@ -7,7 +7,6 @@ import 'react-circular-progressbar/dist/styles.css';
 import { MdOutlineEdit } from "react-icons/md";
 import ProgressBar from "@ramonak/react-progress-bar";
 import SkillsPopup from './PopUpComponents/SkillsPopup';
-import axios from 'axios';
 import LanguagesPopup from './PopUpComponents/LanguagesPopup'
 import ResumePopup from './PopUpComponents/ResumePopup'
 import PersonalDetailsModelPopup from './PopUpComponents/PersonalDetailsModelPopup'
@@ -19,6 +18,9 @@ import EmploymentDetailsPopup from './PopUpComponents/EmploymentDetailsPopup'
 import Accomplishments from './PopUpComponents/Accomplishments'
 import CareerProfileDetails from './PopUpComponents/CareerProfileDetails'
 import Projectspopup from './PopUpComponents/Projectspopup'
+import Config from '../../../../config'
+import axios from 'axios';
+import Cookies from 'js-cookie'
 
 const UserProfileDetails = () => {
 
@@ -112,70 +114,6 @@ const UserProfileDetails = () => {
     //         },
             
     // ]};
-    // Skills JSON
-    // const skills = {
-    //     "data":[
-    //         {
-    //             "id":1,
-    //             "skill":"Android Development",
-    //         },
-    //         {
-    //             "id":2,
-    //             "skill":"Java",
-    //         },
-    //         {
-    //             "id":3,
-    //             "skill":"SQL",
-    //         },
-    //         {
-    //             "id":4,
-    //             "skill":"HTML",
-    //         },
-    //         {
-    //             "id":5,
-    //             "skill":"CSS",
-    //         },
-    //         {
-    //             "id":6,
-    //             "skill":"UI Development",
-    //         },
-    //         {
-    //             "id":7,
-    //             "skill":"Mathlab",
-    //         },
-    //         {
-    //             "id":8,
-    //             "skill":"AutoCAD",
-    //         },
-    // ]};
-    // Language JSON
-    // const languageData = {
-    //     "data":[
-    //         {
-    //             "id":1,
-    //             "languages":"Kannada",
-    //             "Proficiency":"Export",
-    //             "Read":"Read",
-    //             "Write":"",
-    //             "Speak":"Speak",
-    //         },
-    //         {
-    //             "id":2,
-    //             "languages":"English",
-    //             "Proficiency":"Proficient",
-    //             "Read":"Read",
-    //             "Write":"Write",
-    //             "Speak":"Speak",
-    //         },
-    //         {
-    //             "id":3,
-    //             "languages":"Hindi",
-    //             "Proficiency":"beginner",
-    //             "Read":"",
-    //             "Write":"",
-    //             "Speak":"Speak",
-    //         },
-    // ]};
 
     // Profile Score Functionlity
     const [score, setScore] = useState(0)
@@ -208,6 +146,64 @@ const UserProfileDetails = () => {
             setBarColor('#008000');
         }
     }, [score]);
+
+
+    // Profile Data
+    const [user_Projects, setUser_Projects] = useState();
+    const [user_Languages, setUser_Languages] = useState();
+    const [user_Skills, setUser_Skills] = useState();
+    const [professional_details, setProfessional_details] = useState();
+    const [certificate_details, setCertificate_details] = useState();
+    const [education_details, setEducation_details] = useState();
+    const [user_details, setUser_details] = useState();
+
+    const { apiUrl } = Config;
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const ProfileResponseData = await axios.get('http://13.234.33.63/hirework/web/myprofile/',
+    //             { 
+    //                 headers : {"X-CSRFToken" : Cookies.get("csrftoken")
+
+    //             }});
+                
+    //         } catch (error) {
+    //             console.log(error)
+    //         } 
+    //     };
+
+    //     fetchData();
+    // },[])
+
+    
+
+    useEffect(() => {
+        const fetchProfile = async () => {
+          try {
+            const response = await axios.get(`${apiUrl}myprofile/`,{headers : {"X-CSRFToken" : Cookies.get("csrftoken")}});
+            console.log(response);
+      
+          } catch (error) { 
+            console.log(error)
+          }
+        }
+      
+        fetchProfile();
+      
+      }, []);
+
+
+
+
+
+
+
+
+
+
+
+    
 
 
   return (

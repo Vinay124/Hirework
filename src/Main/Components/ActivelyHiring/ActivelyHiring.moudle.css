@@ -22,7 +22,7 @@
 
 .ActivelyHiringcard {
     margin: 1rem;
-    height: 72vh;
+    height: 110vh;
     display: flex;
     margin-top: 1.5rem;
     padding: 1.6rem 1.2rem;
@@ -31,6 +31,7 @@
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     justify-content: space-between;
     flex-direction: column;
+    align-items: center;
 }
 
 .companyLogoWrapper {
@@ -38,7 +39,7 @@
 }
 
 .companyLogo {
-    width: 65px;
+    width: 70px;
     text-align: center;
 }
 
@@ -48,9 +49,12 @@
     border-radius: 20px;
     text-align: center;
     margin-top: 1rem;
+    width: 100%;
+    color: #212121;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
 
-.companyReviewRating > div h5 {
+.companyReviewRating > div h6 {
     font-family: "Nunito Sans", sans-serif;
 }
 .staricon {
@@ -115,6 +119,10 @@
     margin: 1rem auto;
 }
 
+.companyDescription p {
+    text-align: start;
+}
+
 .companyServicesTag {
     text-align: center;
 }
@@ -151,4 +159,95 @@
     background: #6075df;
     color: white;
     transition: all .3s ease-out;
+}
+
+.activlyHiringMapMainDiv a {
+    text-decoration: none;
+}
+
+.NumberofApplies {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    padding: 0.8rem;
+    font-size: 15px;
+}
+
+.JobDetailsSkills, .mainRequiredSkills {
+    display: flex;
+    margin:1.6rem 0;
+}
+
+.JobDetailsSkills h6{
+    margin: 0 10px;
+    text-transform: capitalize;
+    background: #f9f9f9;
+    padding: 8px 16px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    font-size: 13px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+}
+
+.requiredSkills {
+    margin: 1.5rem 0;
+}
+
+.requiredSkills h5{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+}
+
+.mainRequiredSkills h6 {
+    margin: 0 10px;
+    text-transform: capitalize;
+    background: #f9f9f9;
+    padding: 12px 16px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    color: #606060;
+}
+
+.salaryAvg p{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+}
+
+.btn-Loggedin {
+    padding: 10px 28px;
+    font-weight: 600;
+    color: #4f4f4f;
+    border-radius: 10px;
+    background: #0073FF;
+    color: #ffffff;
+    outline: none;
+    border: 2px solid transparent;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.btn-Signup {
+    padding: 10px 28px;
+    font-weight: 600;
+    color: #4f4f4f;
+    border-radius: 10px;
+    background: transparent;
+    color: #0073FF;
+    outline: none;
+    border: 2px solid #0073FF;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin: 0 1rem ;
+}
+.btn-Signup:hover{
+    background: #0073FF;
+    color: #ffffff;
+    transition: all .3s ease;
+}
+
+
+.btn-Loggedin:hover {
+    background: transparent;
+    color: #0073FF;
+    border: 2px solid #0073FF;
+    transition: all .3s ease;
 }

@@ -1551,3 +1551,18 @@
     margin-bottom: 1rem;
 }
 
+
+.btnRemoveProfile {
+    padding: 6px 8px;
+    margin: 1rem 0;
+    border: 1px solid transparent;
+    outline: none;
+    font-size: 14px;
+    color: #0073FF;
+    margin: 0 5px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight:500;
+    text-transform: capitalize;
+    border-radius: 5px;
+    background: transparent;
+}

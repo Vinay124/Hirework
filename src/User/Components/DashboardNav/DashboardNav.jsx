@@ -287,7 +287,6 @@ const DashboardNav = () => {
         setLoading(false);
         redirectNavigate('/UserDashboard/JobSearchResult');
     };
-    
 
   return (
     <>

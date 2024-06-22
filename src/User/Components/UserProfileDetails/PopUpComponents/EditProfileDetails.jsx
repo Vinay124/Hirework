@@ -7,6 +7,8 @@ import { IoCalendarOutline, IoClose } from "react-icons/io5";
 import { LiaRupeeSignSolid } from "react-icons/lia";
 import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
 import moment from 'moment';
+import { MdDeleteOutline } from "react-icons/md";
+
 
 const EditProfileDetails = () => {
 
@@ -102,6 +104,11 @@ const EditProfileDetails = () => {
         reader.readAsDataURL(file);
       }
     };
+
+    const handleRemoveProfilePhoto = () => {
+        setProfilePhoto('');
+        localStorage.removeItem('profilePhoto');
+    };
   
     const handleSave = () => {
       if (!name || !email || !mobileNumber  || !jobRole || !experienceYears || !experienceMonths || !noticePeriod) {
@@ -153,7 +160,7 @@ const EditProfileDetails = () => {
                             <Col className='col-lg-3'>
                                 <div className='editProfileImage'>
                                     {/* <img src={UserImage} className='' alt=''/> */}
-                                    <img src={profilePhoto} className='' alt=''/>
+                                    <img src={profilePhoto} style={{ width: '160px', height: '160px' }} className='' alt=''/>
                                 </div>
                             </Col>
                             <Col>
@@ -193,9 +200,6 @@ const EditProfileDetails = () => {
                                                     <span >
                                                     <LiaRupeeSignSolid className="mx-0" size="22" color="#888888"/>
                                                         {currentSalary}
-                                                        {/* {convertedAmount && (
-                                                            <span>{convertedAmount}</span>
-                                                        )} */}
                                                     </span>
                                                 </div>
                                             </div>
@@ -253,6 +257,11 @@ const EditProfileDetails = () => {
                                 onChange={handleProfilePhotoChange}
                             />
                         </div>
+                            <div className='editProfileRemovebutton'>
+                                <button className='btnRemoveProfile' onClick={handleRemoveProfilePhoto}>Delete Photo
+                                <MdDeleteOutline/>
+                                </button>
+                            </div>
 
                         {/* inputs details*/}
                         <div className='editDataInputInfo'>

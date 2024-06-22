@@ -78,8 +78,6 @@ const ProfileDetails = ({ getProfileImage }) => {
 
   const navigate = useNavigate();
 
-  
-
   const tokenID = sessionStorage.getItem('token');
 
   const handleLogout = async () => {
@@ -101,9 +99,9 @@ const ProfileDetails = ({ getProfileImage }) => {
 
       const fetchScore = async () => {
         try {
-        //   const response = await fetch('https://api.example.com/score'); // Replace with your API endpoint
-        //   const data = await response.json();
-        // localStorage.setItem('newScore', newScore);
+          //   const response = await fetch('https://api.example.com/score'); 
+          //   const data = await response.json();
+          // localStorage.setItem('newScore', newScore);
           const newdata = localStorage.getItem('newScore');
           if (newdata >= 0 && newdata <= 100) {
             setNewNum(newdata);
@@ -133,9 +131,6 @@ const ProfileDetails = ({ getProfileImage }) => {
     <div className='profileDetails'>
       <div className='profileinnerDiv'>
         <div>
-            {/* {UserData.data.map((userinfo) => {
-              return(
-                <> */}
                 <div className='profileDropdownDetails'>
                     <div className='profileDetailsWrapperDiv'>
                       <div className='userimage'>
@@ -188,14 +183,10 @@ const ProfileDetails = ({ getProfileImage }) => {
                         </div>
                       </ul>
                   </div>
-
-                </div>
-                {/* </>
-              )
-            })} */}
-        </div>
+               </div>
+            </div>
+          </div>
       </div>
-    </div>
     </>
   )
 }

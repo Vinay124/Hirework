@@ -1,0 +1,6 @@
+.recruiterContainer {
+    width: calc(100% - 230px);
+    margin-left: 230px;
+    padding: 6rem 2rem 2rem 2rem;
+    background: #fafafa;
+}

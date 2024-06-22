@@ -1,0 +1,131 @@
+.postJobRole {
+    padding: 1rem;
+    background: #ffffff;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.JobTitleInput,
+.jobDescriptionInput {
+    display: flex;
+    flex-direction: column;
+}
+
+.JobTitleInput label,
+.jobDescriptionInput label,
+.categoryInputBox label,
+.jobTitleInputBox label,
+.jobappExp label,
+.jobApplyTypeInput label,
+.phoneNumberInputBox label,
+.salaryTypeInputBox label ,
+.minSalaryInputBox label,
+.minSalaryInputBox label,
+.maxSalaryInputBox label,
+.genderInputBox label,
+.tagInputBox label,
+.industryInputBox label,
+.QualificationInputBox label,
+.careerInputBox label,
+.ExperienceInputBox label,
+.VideoIntroductionBox label,
+.friendlyAddressinputBox label,
+.locationInputBox label{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: rgb(118, 118, 118);
+    text-transform: capitalize;
+    margin: 10px 0 8px 0px;
+}
+
+
+.JobTitleInput input,
+.jobDescriptionInput textarea,
+.categoryInputBox select,
+.jobTitleInputBox select,
+.jobappExp input,
+.jobApplyTypeInput input,
+.phoneNumberInputBox input,
+.salaryTypeInputBox select,
+.minSalaryInputBox input,
+.maxSalaryInputBox input,
+.genderInputBox select,
+.tagInputBox input,
+.industryInputBox select,
+.QualificationInputBox select,
+.careerInputBox select,
+.ExperienceInputBox input,
+.VideoIntroductionBox input,
+.friendlyAddressinputBox input,
+.locationInputBox input
+{
+    width: 100%;
+    padding: 9px 10px;
+    outline: none;
+    border: 1px solid #f1f1f1;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 16px;
+}
+
+.jobDescriptionInput textarea {
+    resize: none;
+}
+
+
+.btn-postjob{
+    padding: 12px 30px;
+    background: #0073FF;
+    outline: none;
+    border: 1.3px solid #14a077;
+    color: white;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    border-radius: 10px;
+    margin-top: 2.3rem;
+}
+
+.btn-revious {
+    padding: 12px 30px;
+    /* background: #0073FF; */
+    border:1px solid  #0073FF;
+    outline: none;
+    border: 1.3px solid #14a077;
+    color: white;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    border-radius: 10px;
+    margin-top: 2.3rem;
+    color: #0073FF;
+    margin-right:1rem ;
+}
+
+.postJobmainRow {
+    margin-top: 1.5rem;
+}
+
+/* .informactionDatasDiv {
+    border-top: 1px solid #e8e8e8;
+    margin: 1rem 0;
+    border-radius: 2px;
+} */
+.informactionDatasDiv > div h4 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin-top: 1.2rem;
+    font-weight: 600;
+}
+
+.HeaddingMainWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.backBtnDiv{
+    padding: 7px;
+    background: #ffffff;
+    color: #5a5a5a;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    cursor: pointer;
+}

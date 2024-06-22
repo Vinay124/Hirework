@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import UserAvatar from '../../../assets/usersIcon/UserAvatar.jpg' 
 import { Col, Row } from 'react-bootstrap';
 import { RiEditCircleFill } from "react-icons/ri";
@@ -165,10 +165,7 @@ const AccountInfo = () => {
         ]
     };
 
-
-
-    const [score, setScore] = useState(10);
-
+    const [score, setScore] = useState();
 
     const calculatefillPercentage = () => {
         if(score === 0) return '0%';
@@ -177,13 +174,52 @@ const AccountInfo = () => {
     };
 
 
+    // profile score functionlity
+    const [newscore, setNewScore] = useState(40)
+    const [barColor, setBarColor] = useState('#69aaf9'); 
+
+    const fetchScore = async () => {
+        try {
+        //   const response = await fetch('https://api.example.com/score'); // Replace with your API endpoint
+        //   const data = await response.json();
+          const newScore = 40;
+          localStorage.setItem('newScore', newScore);
+          if (newScore >= 0 && newScore <= 100) {
+            setNewScore(newScore);
+          }
+        } catch (error) {
+          console.error('Error fetching score:', error);
+        }
+      };
+
+    useEffect(() => {
+        fetchScore();
+      }, []);
+    
+    useEffect(() => {
+        if (score <= 30) {
+            setBarColor('#FF0000');
+        } else if (score <= 40) {
+            setBarColor('#ffc760');
+        } else if (score <= 80) {
+            setBarColor('#FFA500');
+        } else if (score <= 90) {
+            setBarColor('#12c112');
+        } else {
+            setBarColor('#008000');
+        }
+    }, [score]);
+
+
   return (
     <>
     <section className='userDetails'>
         <div class="score-indicator">
             <img src={UserAvatar} alt="Profile Image"/>
             <div className='profileImage_edit'>
-            <TbEdit  size={16} color='#ffffff'/>
+                <Link to="/UserDashboard/UserProfileDetails">
+                    <TbEdit size={16} color='#ffffff'/>
+                </Link>
             </div>
             <div className="circle" style={{ clipPath: `polygon(0 0, ${calculatefillPercentage()} 0, ${calculatefillPercentage()} 100%, 0 100%)` }}></div>
             <div class="score">{calculatefillPercentage()}</div>
@@ -206,16 +242,22 @@ const AccountInfo = () => {
             </div>
         </div>
     
-        <div className='progressBarMainwrapper'>
+        <div className='progressBarMainwrapper '>
             <div className='progressBarDiv'>
-                <ProgressBar completed={50}
-                height='10px'
+                <ProgressBar completed={`${score}`}
+                height='15px'
                 baseBgColor='#dddddd'
-                bgColor='#69aaf9'
-                width='80%'
+                bgColor={`${barColor}`}
+                width='100%'
+                borderRadius='5px'
                 style={{margin:'0 auto'}}
                 labelSize='0' />
             </div>
+            <Row className='mt-2 profileScoreData mb-4'>
+                <Col className='col-lg-4 text-start'>0%</Col>
+                <Col className='col-lg-4 text-center'>50%</Col>
+                <Col className='col-lg-4 text-end'>100%</Col>
+            </Row>
             <div>
                 <Link to="/UserDashboard/UserProfileDetails">
                     <button className='btn_profileCompleted'>Complete Profile</button>
@@ -343,7 +385,9 @@ const AccountInfo = () => {
         </div>
 
         <div className='mt-4'>
-            <button className='btn-AccountEditProfile'>Edit Profile</button>
+            <Link to="/UserDashboard/UserProfileDetails">
+                <button className='btn-AccountEditProfile'>Edit Profile</button>
+            </Link>
         </div>
     </section>
     </>

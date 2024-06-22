@@ -1,0 +1,54 @@
+.jobsCategoryinner {
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    height: 16.5vh;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    
+}
+
+.applicationStatus {
+    margin-top: 1rem;
+}
+
+.jobCategoryimage img {
+    width: 40px;
+}
+
+.jobCategoryimage {
+    padding: 1rem;
+    background: #ffffff;
+    background: linear-gradient(202deg, #1c92d233 -90%, #f2fcfe 80%);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.applicationStatusHeadding {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    position: relative;
+}
+
+.applicationStatusHeadding::before {
+    position: absolute;
+    content: '';
+    background: red;
+    width: 8px;
+    height: 35px;
+    left: -18px;
+    border-radius: 4px;
+}
+
+.applicationDetails {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.applicationDetails > div h6 {
+    font-weight: 500;
+}
+
+
+/* 
+ */

@@ -12,12 +12,14 @@ import Register from './User/Components/Register/Register'
 import UserDashboard from './User/Pages/UserDashboard/UserDashboard'
 import RecentJobs from './User/Components/RecentJobs/RecentJobs'
 import JobDetail from './User/Pages/JobDetail/JobDetail'
-
 // Profile
 import UserProfileDetails from './User/Components/UserProfileDetails/UserProfileDetails'
 import Test from './Test'
 import RecruiterRegister from './Recruiter/Components/RecruiterLogin/RecruiterSignup/RecruiterRegister'
 import JobSearchResults from './Main/Components/RecentJobs/JobSearchResults'
+import RecruiterDashboard from './Recruiter/Pages/RecruiterDashboard/Pages/RecruiterDashboard'
+import ActivelyHiringJobs from './Main/Components/ActivelyHiring/ActivelyHiringJobs'
+import PostJob from './Recruiter/Pages/RecruiterDashboard/Components/PostJob/PostJob'
 
 
 function App() {
@@ -49,14 +51,16 @@ function App() {
 
         {/* Job Details */}
         <Route path='/UserDashboard/JobDetail' element={<JobDetail/>}/>
+        {/* Job card details */}
+        <Route path='activelyHiringCompany/:id' element={<ActivelyHiringJobs/>}/>
         
         {/* Profile Details */}
         <Route path='/UserDashboard/UserProfileDetails' element={<UserProfileDetails/>}/>
       
       {/* RecruterDashboard */}
-      {/* <Route path='' */}
+      <Route path='/RecruiterDashboard' element={<RecruiterDashboard/>}/> 
 
-      
+      <Route path='/RecruiterDashboard/PostJob' element={<PostJob/>}/>     
       </Routes>
     </Router>
       

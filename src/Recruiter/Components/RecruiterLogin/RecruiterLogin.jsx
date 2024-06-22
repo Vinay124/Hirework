@@ -10,7 +10,7 @@ const RecruiterLogin = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('')
+  const [error, setError] = useState('');
   const [attempts, setAttempts] = useState(0);
 
   const maxAttempth = 4;
@@ -38,10 +38,19 @@ const RecruiterLogin = () => {
     }
 
     try {
-      const responseData = await axios.post(`${apiUrl}user/login`,{ email, password });
+      const responseData = await axios.post(
+        `${apiUrl}login/`,
+        { email, password },
+        {
+          headers: {
+            // 'Authorization': `X-Csrftoken: ${}`,
+            'Content-Type': 'application/json'
+          }
+        });
       if (responseData.status === 200) {
-        const RecruterToken = responseData.data.data.token
-        navigate('/UserDashboard');
+        // const RecruterToken = responseData.data.data.token
+        navigate('/RecruiterDashboard');
+        console.log(responseData);
         sessionStorage.setItem('recruiterToken', RecruterToken);
       } else {
         console.log('Login Failed... please try again later')
@@ -54,6 +63,8 @@ const RecruiterLogin = () => {
       }, waitTimeMs);
     }
   };
+
+  
 
   return (
     <>
@@ -124,7 +135,7 @@ const RecruiterLogin = () => {
                   <div className='suggestionsDiv'> 
                     <div>
                       <span>Don’t have an account? </span>
-                      <Link to="/Register">Sign Up for free</Link>
+                      <Link to="/RecruiterRegister">Sign Up for free</Link>
                     </div> 
                   </div>
                 </div>

@@ -54,7 +54,6 @@
     outline: none;
     border: 1.2px solid transparent;
     border-radius:8px;
-
 }
 
 .btn-Recruiter:hover {
@@ -295,11 +294,6 @@
     padding: 5px 0;
   }
   
-
-/* .menu-ItemsWrapper {
-    padding: 2rem;
-} */
-
 .menu-items ul {
     padding: 0;
 }
@@ -375,3 +369,4 @@
 .mobileHeader {
     display: none;
 }
+

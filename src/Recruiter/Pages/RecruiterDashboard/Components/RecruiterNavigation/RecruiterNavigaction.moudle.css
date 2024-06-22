@@ -1,0 +1,264 @@
+/* Top bar */
+.AdminTopBar {
+    background: #f3f3f3;
+    height: auto;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  }
+  
+  .userData{
+    margin: 0 10px;
+  }
+  
+  .adminBgBanner {
+    background: url('../../assets/adminAssets/users/userBg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 16vh;
+  }
+  
+  .admin-logout {
+    padding: 7px 20px;
+    color: #505050;
+    /* background: #007230; */
+    font-family: "Outfit";
+    font-size: 13px;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    cursor: pointer;
+    transition: all .3s ease;
+  }
+  
+  .admin-logout:hover {
+    color: #fff;
+    /* background: #45AF47; */
+  }
+  
+  .userinformation {
+    position: absolute;
+    filter: none;
+    background: rgb(255, 255, 255);
+    height: 42vh;
+    width: 25%;
+    top: 3.5rem;
+    right: 7rem;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    transition: all .3s ease-in-out;
+  }
+  
+  .adminProfile img{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+  }
+  .adminProfile {
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+  }
+  
+  .userData span{
+    font-family: "Outfit";
+    font-size: 13px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color:#fff
+  }
+  .userData h6{
+    font-family: "Outfit";
+    font-size: 13px;
+    text-transform: capitalize;
+    margin: 0;
+    color:#fff
+  }
+  
+  .userInfoWrpper {
+    margin-right: 7rem;
+    margin-top: 0rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .notifications {
+    padding: 1rem;
+  }
+  
+  .passwordchange ,
+  .deleteAccount{
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .passwordContent {
+    margin: 0 14px;
+  }
+  
+  .accountSettings {
+    padding: 10px 16px;
+  }
+  
+  .passwordContent h5{
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-family: 500;
+    font-family: "Outfit";
+  }
+  
+  .accountSettings h6,
+  .notifications h6 {
+    font-size: 13px;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 10px 0;
+  }
+  
+  .userIcon {
+    background: #fff;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    box-Shadow: 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px';
+  }
+  
+  /* navigation */
+  
+  .navSideBar {
+    height: 100%;
+    width: 230px;
+    position: fixed;
+    top: 4.8rem;
+    left: 0px;
+    background: #ffffff;
+    /* background: linear-gradient(92deg, #93EB45, #45AF47); */
+    /* background: #f3f3f3; */
+    padding: 2px;
+    color: white;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px; */
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    }
+   
+  .sidebarUl {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+.sidebarContent::-webkit-scrollbar{
+    width: 3px;
+    }
+    .sidebarContent::-webkit-scrollbar-track {
+        background: #fcfcfc;
+        margin-top: 3rem;
+}
+.sidebarContent::-webkit-scrollbar-thumb {
+    background: #cdcdcd;
+}
+.sidebarContent::-webkit-scrollbar-thumb:hover{
+    background: #979797;
+}
+
+.sidebarContent {
+    overflow: scroll;
+    height: 70vh;
+    overflow-x: hidden;
+    padding: 1rem;
+}
+           
+  
+.sidebarUl li {
+    /* background-color: #444;  */
+    list-style: none;
+    color: #2c2c2c;
+    margin: 5px;  
+  }
+  .sidebarUl li a{
+    list-style: none;
+    color: #2c2c2c;
+    text-decoration: none;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+    
+.sidebarUl li a div{
+    /* margin-right: 15px; */
+    padding-bottom: 8px;
+}
+
+.navigactionIcon {
+    padding-bottom: 8px;
+    margin-right: 15px;
+}
+  
+  .menu-item {
+    cursor: pointer;
+    background-color: #444;
+    background: transparent;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+    font-family: "Outfit";
+  }
+  
+  .menu-item .open {
+    background: red;
+  }
+  
+  .menu-item > div  {
+    padding: 8px;
+  }
+  .menu-item ul {
+    display: none;
+    padding: 0;
+    margin: 5px 0;
+  }
+  
+  .menu-item.open ul {
+    display: block;
+  }
+  
+  .menu-item ul li {
+    padding: 7px 6px;
+    font-size: 14px;
+    margin:3px 0;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    color: #ffffff;
+  }
+  
+  .menu-item ul li:hover {
+    background: #ffffff33;
+  }
+  .menu-item:hover > div {
+    background: #ffffff54;
+    border-radius: 10px;
+  }
+  
+  .adminLogoWrapper img {
+    text-align: center;
+    width: 95px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .adminTextwrapper h6{
+    font-family: "Outfit";
+    font-size: 14px;
+    text-transform: capitalize;
+  }

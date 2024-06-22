@@ -151,7 +151,7 @@ const Step1 = ({ formData, handleChange }) => (
     <div className='suggestionsDiv'> 
         <div>
           <span>Already Registered? </span>
-          <Link to="/Register">Login here</Link>
+          <Link to="/RecruiterLogin">Login here</Link>
         </div> 
       </div>
     </>
